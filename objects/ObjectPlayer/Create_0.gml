@@ -20,11 +20,32 @@ data = {
 		}
 	},
 	character: {
-		speed: 3,
+		walkSpeed: 3,
+		runSpeed: 8,
+		sprites: {
+			front: {
+				idle: spriteDoinkIdleFront,
+				walkHorizontal: spriteDoinkWalkHorizontalFront,
+				walkVertical: spriteDoinkWalkVerticalFront,
+				walkDiagonal: spriteDoinkWalkDiagonalFront,
+				midPunch: spriteDoinkMidPunchFront
+			},
+			back: {
+				idle: spriteDoinkIdleBack,
+				walkHorizontal: spriteDoinkWalkHorizontalBack,
+				walkVertical: spriteDoinkWalkVerticalBack,
+				walkDiagonal: spriteDoinkWalkDiagonalBack,
+				midPunch: spriteDoinkMidPunchBack
+			},
+			run: spriteDoinkRun,
+			uppercut: spriteDoinkUppercut
+		}
 	}
 };
 
-maxHSpeed = data.character.speed;
-maxVSpeed = data.character.speed/2.5;
-image_xscale = 2;
-image_yscale = 2;
+target = { x: room_width, y: room_height/2};
+maxHSpeed = data.character.walkSpeed;
+maxVSpeed = data.character.walkSpeed/2.5;
+running = false;
+image_xscale = GAME_SCALE;
+image_yscale = GAME_SCALE;

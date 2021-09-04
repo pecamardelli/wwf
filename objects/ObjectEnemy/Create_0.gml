@@ -1,4 +1,3 @@
-/// @description Insert description here
 
 image_xscale = GAME_SCALE;
 image_yscale = GAME_SCALE;

@@ -16,5 +16,6 @@ function check_attack(){
 	if (attacking) {
 		speed = 0;
 		image_speed = 1;
+		running = false;
 	}
 }

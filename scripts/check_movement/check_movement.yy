@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Gameplay.yy",
   },
   "resourceVersion": "1.0",
-  "name": "key_actions",
+  "name": "check_movement",
   "tags": [],
   "resourceType": "GMScript",
 }

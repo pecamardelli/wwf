@@ -19,6 +19,9 @@ function Doink() constructor {
 			walkDiagonal: spriteDoinkWalkDiagonalBack,
 			midPunch: spriteDoinkMidPunchBack
 		},
+		rotateXFront: spriteDoinkRotateXFront,
+		rotateXBack: spriteDoinkRotateXBack,
+		rotateY: spriteDoinkRotateY,
 		run: spriteDoinkRun,
 		uppercut: spriteDoinkUppercut
 	}

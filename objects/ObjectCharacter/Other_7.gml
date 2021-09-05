@@ -8,3 +8,5 @@ if (attacking) {
 	attacking = false;
 	canMove = true;
 }
+
+if (!is_undefined(rotate)) rotate = undefined;

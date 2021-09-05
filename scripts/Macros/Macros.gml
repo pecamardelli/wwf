@@ -6,6 +6,11 @@
 
 #macro POSITION_FRONT	"front"
 #macro POSITION_BACK	"back"
+#macro FACING_LEFT		-1
+#macro FACING_RIGHT		1
+
+#macro ROTATE_X		0x00
+#macro ROTATE_Y		0x01
 
 #macro DOINK	"doink"
 #macro RAZOR	"razor"

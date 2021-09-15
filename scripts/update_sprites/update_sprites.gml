@@ -28,7 +28,7 @@ function update_sprites(){
 				switch (rotate) {
 					case ROTATE_X:
 						sprite_index = data.character.sprites.rotateXBack;
-						image_speed = facing;
+						image_xscale = GAME_SCALE * -facing;
 						break;
 					case ROTATE_Y:
 						sprite_index = data.character.sprites.rotateY;
@@ -42,7 +42,7 @@ function update_sprites(){
 				switch (rotate) {
 					case ROTATE_X:
 						sprite_index = data.character.sprites.rotateXFront;
-						image_speed = facing;
+						image_xscale = GAME_SCALE * -facing;
 						break;
 					case ROTATE_Y:
 						sprite_index = data.character.sprites.rotateY;
@@ -52,36 +52,34 @@ function update_sprites(){
 				break;
 		}
 
-		if (!running) image_xscale = GAME_SCALE * facing;
+		if (is_undefined(rotate)) {
+			image_xscale = GAME_SCALE * facing;
 
-		if (moveX) {
-			if (is_undefined(rotate)) {
+			if (moveX) {
 				sprite_index = sprites.walkHorizontal;
 				image_speed = hspeed/maxHSpeed*facing;
 			}
-		}
 
-		if (moveY && !running) {
-			if (is_undefined(rotate)) {
+			if (moveY) {
 				sprite_index = sprites.walkVertical;
 				image_speed = vspeed/maxVSpeed*imageSpeedSign;
 			}
-		}
 	
-		if (moveX && moveY && is_undefined(rotate)) {
-			if (sign(sin(direction*pi/180)*facing) == sign(cos(direction*pi/180))*imageSpeedSign) {
-				sprite_index = sprites.walkDiagonal;
-				image_speed = -vspeed/maxVSpeed*1.2;
+			if (moveX && moveY) {
+				if (sign(sin(direction*pi/180)*facing) == sign(cos(direction*pi/180))*imageSpeedSign) {
+					sprite_index = sprites.walkDiagonal;
+					image_speed = -vspeed/maxVSpeed*1.2;
+				}
+				else sprite_index = sprites.walkHorizontal;
 			}
-			else sprite_index = sprites.walkHorizontal;
-		}
 	
-		if (!moveX && !running) hspeed = 0;
-		if (!moveY && !running) vspeed = 0;
+			if (!moveX) hspeed = 0;
+			if (!moveY) vspeed = 0;
 	
-		if (!moveX && !moveY && !running && is_undefined(rotate)) {
-			sprite_index = sprites.idle;
-			image_speed = 1;
+			if (!moveX && !moveY) {
+				sprite_index = sprites.idle;
+				image_speed = 1;
+			}
 		}
 	}
 }

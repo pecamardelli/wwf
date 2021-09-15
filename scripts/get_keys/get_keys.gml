@@ -12,12 +12,12 @@ function get_keys() {
 	if(!is_undefined(keys.keyboard.up))	   up		= keyboard_check(keys.keyboard.up);
 	if(!is_undefined(keys.keyboard.down))  down		= keyboard_check(keys.keyboard.down);
 
-	if(!is_undefined(keys.keyboard.buttonA)) buttonA	= keyboard_check(keys.keyboard.buttonA);
-	if(!is_undefined(keys.keyboard.buttonB)) buttonB	= keyboard_check(keys.keyboard.buttonB);
-	if(!is_undefined(keys.keyboard.buttonC)) buttonC	= keyboard_check(keys.keyboard.buttonC);
-	if(!is_undefined(keys.keyboard.buttonX)) buttonX	= keyboard_check(keys.keyboard.buttonX);
-	if(!is_undefined(keys.keyboard.buttonY)) buttonY	= keyboard_check(keys.keyboard.buttonY);
-	if(!is_undefined(keys.keyboard.buttonZ)) buttonZ	= keyboard_check(keys.keyboard.buttonZ);
+	if(!is_undefined(keys.keyboard.buttonA)) buttonA	= keyboard_check_pressed(keys.keyboard.buttonA);
+	if(!is_undefined(keys.keyboard.buttonB)) buttonB	= keyboard_check_pressed(keys.keyboard.buttonB);
+	if(!is_undefined(keys.keyboard.buttonC)) buttonC	= keyboard_check_pressed(keys.keyboard.buttonC);
+	if(!is_undefined(keys.keyboard.buttonX)) buttonX	= keyboard_check_pressed(keys.keyboard.buttonX);
+	if(!is_undefined(keys.keyboard.buttonY)) buttonY	= keyboard_check_pressed(keys.keyboard.buttonY);
+	if(!is_undefined(keys.keyboard.buttonZ)) buttonZ	= keyboard_check_pressed(keys.keyboard.buttonZ);
 	
 	if(!is_undefined(keys.keyboard.start))  start	= keyboard_check_pressed(keys.keyboard.start);
 	if(!is_undefined(keys.keyboard.select)) select	= keyboard_check_pressed(keys.keyboard.select);

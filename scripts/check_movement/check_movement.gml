@@ -32,7 +32,6 @@ function check_movement(){
 			image_xscale = GAME_SCALE*facing;
 			hspeed = data.character.runSpeed*facing;
 		}
-		
 		running = true;
 	}
 }

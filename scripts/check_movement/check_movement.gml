@@ -7,24 +7,23 @@ function check_movement(){
 	if (!canMove || attacking) return;
 	
 	if (right) {
-		if (hspeed < 0) hspeed = 0;
-		hspeed = maxHSpeed;
+		if (running) {
+			if (hspeed < 0) running = false;
+		}
+		else hspeed = maxHSpeed;
 	}
 	else if (left) {
-		if (hspeed > 0) hspeed = 0;
-		hspeed = -maxHSpeed;
+		if (running) {
+			if (hspeed > 0) running = false;
+		}
+		else hspeed = -maxHSpeed;
 	}
 	
-	if (up) {
-		if (vspeed > 0) vspeed = 0;
-		vspeed = -maxVSpeed;
-	}
-	else if (down) {
-		if (vspeed < 0) vspeed = 0;
-		vspeed =  maxVSpeed;
-	}
+	if (up) vspeed = -maxVSpeed;
+	else if (down) vspeed =  maxVSpeed;
+	else vspeed = 0;
 	
-	if (buttonY && !running) {
+	if (buttonY) {
 		if (moveX) {
 			image_xscale = GAME_SCALE*sign(hspeed);
 			hspeed = data.character.runSpeed*sign(hspeed);
@@ -35,7 +34,5 @@ function check_movement(){
 		}
 		
 		running = true;
-		sprite_index = data.character.sprites.run;
-		image_speed = 1;
 	}
 }

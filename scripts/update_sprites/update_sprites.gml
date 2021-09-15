@@ -16,85 +16,72 @@ function update_sprites(){
 		}
 	}
 	
-	var moveX = left || right;
-	var moveY = up || down;
-
-	switch (position) {
-		case POSITION_BACK:
-			var imageSpeedSign = -1;
-			var sprites = data.character.sprites.back;
-			switch (rotate) {
-				case ROTATE_X:
-					sprite_index = data.character.sprites.rotateXBack;
-					image_speed = facing;
-					break;
-				case ROTATE_Y:
-					sprite_index = data.character.sprites.rotateY;
-					image_speed = 1;
-					break;
-			}
-			break;
-		case POSITION_FRONT:
-			var imageSpeedSign = 1;
-			var sprites = data.character.sprites.front;
-			switch (rotate) {
-				case ROTATE_X:
-					sprite_index = data.character.sprites.rotateXFront;
-					image_speed = facing;
-					break;
-				case ROTATE_Y:
-					sprite_index = data.character.sprites.rotateY;
-					image_speed = -1;
-					break;
-			}
-			break;
-	}
-
-	if (!running) image_xscale = GAME_SCALE * facing;
-
-	if (moveX) {
-		running = false;
-		if (is_undefined(rotate)) {
-			sprite_index = sprites.walkHorizontal;
-			image_speed = hspeed/maxHSpeed*facing;
-		}
-	}
-
-	if (moveY && !running) {
-		if (is_undefined(rotate)) {
-			sprite_index = sprites.walkVertical;
-			image_speed = vspeed/maxVSpeed*imageSpeedSign;
-		}
-	}
-
-	if (buttonY && !running) {
-		if (moveX) {
-			image_xscale = GAME_SCALE*sign(hspeed);
-			hspeed = data.character.runSpeed*sign(hspeed);
-		}
-		else {
-			image_xscale = GAME_SCALE*facing;
-			hspeed = data.character.runSpeed*facing;
-		}
-		
-		running = true;
+	if (running) {
 		sprite_index = data.character.sprites.run;
 		image_speed = 1;
 	}
-	
-	if (moveX && moveY && is_undefined(rotate)) {
-		if (sign(sin(direction*pi/180)*facing) == sign(cos(direction*pi/180))*imageSpeedSign) {
-			sprite_index = sprites.walkDiagonal;
-			image_speed = -vspeed/maxVSpeed*1.2;
+	else {
+		switch (position) {
+			case POSITION_BACK:
+				var imageSpeedSign = -1;
+				var sprites = data.character.sprites.back;
+				switch (rotate) {
+					case ROTATE_X:
+						sprite_index = data.character.sprites.rotateXBack;
+						image_speed = facing;
+						break;
+					case ROTATE_Y:
+						sprite_index = data.character.sprites.rotateY;
+						image_speed = 1;
+						break;
+				}
+				break;
+			case POSITION_FRONT:
+				var imageSpeedSign = 1;
+				var sprites = data.character.sprites.front;
+				switch (rotate) {
+					case ROTATE_X:
+						sprite_index = data.character.sprites.rotateXFront;
+						image_speed = facing;
+						break;
+					case ROTATE_Y:
+						sprite_index = data.character.sprites.rotateY;
+						image_speed = -1;
+						break;
+				}
+				break;
 		}
-		else sprite_index = sprites.walkHorizontal;
-	}
+
+		if (!running) image_xscale = GAME_SCALE * facing;
+
+		if (moveX) {
+			if (is_undefined(rotate)) {
+				sprite_index = sprites.walkHorizontal;
+				image_speed = hspeed/maxHSpeed*facing;
+			}
+		}
+
+		if (moveY && !running) {
+			if (is_undefined(rotate)) {
+				sprite_index = sprites.walkVertical;
+				image_speed = vspeed/maxVSpeed*imageSpeedSign;
+			}
+		}
 	
-	if (!moveX && !running) hspeed = 0;
-	if (!moveY && !running) vspeed = 0;
+		if (moveX && moveY && is_undefined(rotate)) {
+			if (sign(sin(direction*pi/180)*facing) == sign(cos(direction*pi/180))*imageSpeedSign) {
+				sprite_index = sprites.walkDiagonal;
+				image_speed = -vspeed/maxVSpeed*1.2;
+			}
+			else sprite_index = sprites.walkHorizontal;
+		}
 	
-	if (!moveX && !moveY && !running && is_undefined(rotate)) {
-		sprite_index = sprites.idle;
-		image_speed = 1;
+		if (!moveX && !running) hspeed = 0;
+		if (!moveY && !running) vspeed = 0;
+	
+		if (!moveX && !moveY && !running && is_undefined(rotate)) {
+			sprite_index = sprites.idle;
+			image_speed = 1;
+		}
 	}
 }

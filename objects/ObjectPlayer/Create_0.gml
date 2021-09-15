@@ -20,7 +20,7 @@ data = {
 			select: ord("Space")
 		}
 	},
-	character: get_new_character(RANDOM),
+	character: get_new_character(DOINK),
 };
 
 maxHSpeed = data.character.walkSpeed;

@@ -2,8 +2,8 @@
 // https =//help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Doink() constructor {
 	name = "Doink The Clown";
-	walkSpeed = 3;
-	runSpeed = 8;
+	walkSpeed = 5;
+	runSpeed = 10;
 	sprites = {
 		front: {
 			idle: spriteDoinkIdleFront,

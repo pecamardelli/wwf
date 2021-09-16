@@ -20,3 +20,6 @@
 #macro BIGELOW	"bigelow"
 #macro HITMAN	"hitman"
 #macro LEX		"lex"
+
+#macro CHARACTER_X_DISTANCE 25
+#macro CHARACTER_Y_DISTANCE	20

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Gameplay",
-    "path": "folders/Scripts/Gameplay.yy",
+    "name": "Getters",
+    "path": "folders/Scripts/Gameplay/Getters.yy",
   },
   "resourceVersion": "1.0",
   "name": "get_depth",

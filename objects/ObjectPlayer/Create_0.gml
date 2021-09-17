@@ -1,5 +1,6 @@
 /// @description Insert description here
 
+floorY = y;
 image_xscale = GAME_SCALE;
 image_yscale = GAME_SCALE;
 

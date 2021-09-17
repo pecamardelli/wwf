@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Gameplay",
-    "path": "folders/Scripts/Gameplay.yy",
+    "name": "Key Management",
+    "path": "folders/Scripts/Gameplay/Key Management.yy",
   },
   "resourceVersion": "1.0",
   "name": "get_keys",

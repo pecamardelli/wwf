@@ -4,7 +4,7 @@ function check_movement(){
 	moveX = left || right;
 	moveY = up || down;
 	
-	if (!canMove || attacking) return;
+	if (!canMove || attacking || !onFloor) return;
 	
 	if (right) {
 		if (running) {
@@ -18,9 +18,14 @@ function check_movement(){
 		}
 		else hspeed = -maxHSpeed;
 	}
+	else if (!running) hspeed = 0;
 	
-	if (up) vspeed = -maxVSpeed;
-	else if (down) vspeed =  maxVSpeed;
+	if (up) {
+		vspeed = -maxVSpeed;
+	}
+	else if (down) {
+		vspeed = maxVSpeed;
+	}
 	else vspeed = 0;
 	
 	if (buttonY) {
@@ -34,4 +39,6 @@ function check_movement(){
 		}
 		running = true;
 	}
+	
+	if (!moveX && !moveY && !running) hspeed = approach(hspeed,0,0.1);
 }

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Getters",
-    "path": "folders/Scripts/Gameplay/Getters.yy",
+    "name": "Movement",
+    "path": "folders/Scripts/Gameplay/Movement.yy",
   },
   "resourceVersion": "1.0",
-  "name": "get_target",
+  "name": "apply_force",
   "tags": [],
   "resourceType": "GMScript",
 }

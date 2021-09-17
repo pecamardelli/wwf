@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Gameplay",
-    "path": "folders/Scripts/Gameplay.yy",
+    "name": "Movement",
+    "path": "folders/Scripts/Gameplay/Movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "check_attack",

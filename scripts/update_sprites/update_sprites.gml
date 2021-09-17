@@ -73,9 +73,6 @@ function update_sprites(){
 				else sprite_index = sprites.walkHorizontal;
 			}
 	
-			if (!moveX) hspeed = 0;
-			if (!moveY) vspeed = 0;
-	
 			if (!moveX && !moveY) {
 				sprite_index = sprites.idle;
 				image_speed = 1;

@@ -7,4 +7,6 @@ get_keys();
 check_position();
 check_movement();
 check_attack();
-if (!attacking) update_sprites();
+if (!attacking) {
+	if (!is_undefined(spriteScript)) spriteScript();
+}

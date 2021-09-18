@@ -3,5 +3,5 @@
 function get_target(targetObject){
 	var nearestTarget = instance_nearest(x,y,targetObject);
 	if (nearestTarget == noone) return undefined;
-	return { x: nearestTarget.x, y: nearestTarget.y };
+	return { x: nearestTarget.x, y: nearestTarget.floorY };
 }

@@ -7,11 +7,4 @@ function apply_force(direction,magnitude){
 		onFloor = false;
 		y--;
 	}
-	//if (is_undefined(impulseX)) impulseX = 0;
-	//if (is_undefined(impulseY)) impulseY = 0;
-	//forceAppliedX = magnitude * cos(direction*pi/180);
-	//forceAppliedY = magnitude * abs(sin(direction*pi/180));
-	//impulseX = x + impulseX + forceAppliedX;
-	//// We don't expect an impulse to the floor. Gravity will take care of that.
-	//impulseY = y + impulseY + magnitude * abs(sin(direction*pi/180));
 }

@@ -9,7 +9,7 @@ function update_sprites(){
 			rotate = ROTATE_X;
 			lastFacing = facing;
 		}
-		position = y > target.y ? POSITION_BACK : POSITION_FRONT;
+		position = floorY > target.y ? POSITION_BACK : POSITION_FRONT;
 		if (lastPosition != position && !running) {
 			rotate = ROTATE_Y;
 			lastPosition = position;
@@ -20,6 +20,9 @@ function update_sprites(){
 		sprite_index = data.character.sprites.run;
 		image_speed = 1;
 	}
+	//else if (!onFloor) {
+	//	if (!is_undefined(notOnFloorScript)) notOnFloorScript();
+	//}
 	else {
 		switch (position) {
 			case POSITION_BACK:

@@ -26,3 +26,5 @@ data = {
 
 maxHSpeed = data.character.walkSpeed;
 maxVSpeed = data.character.walkSpeed/2.5;
+
+spriteScript = update_sprites;

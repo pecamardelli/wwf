@@ -1,10 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function check_movement(){
+	if (!canMove || attacking || !onFloor) return;
 	moveX = left || right;
 	moveY = up || down;
-	
-	if (!canMove || attacking || !onFloor) return;
 	
 	if (right) {
 		if (running) {

@@ -10,7 +10,8 @@ function Yoko() constructor {
 			walkHorizontal: spriteDoinkWalkHorizontalFront,
 			walkVertical: spriteDoinkWalkVerticalFront,
 			walkDiagonal: spriteDoinkWalkDiagonalFront,
-			midPunch: spriteDoinkMidPunchFront
+			midPunch: spriteDoinkMidPunchFront,
+			getUp: spriteDoinkGetUpFront,
 		},
 		back: {
 			idle: spriteDoinkIdleBack,
@@ -23,6 +24,7 @@ function Yoko() constructor {
 		rotateXBack: spriteDoinkRotateXBack,
 		rotateY: spriteDoinkRotateY,
 		run: spriteDoinkRun,
+		dropped: spriteDoinkDropped,
 		uppercut: spriteDoinkUppercut
 	}
 }

@@ -4,6 +4,7 @@ function get_up(){
 	sprite_index = data.character.sprites.front.getUp;
 	image_speed = 1;
 	if (image_index == sprite_get_number(sprite_index)-1) {
+		moveScript = basic_movement;
 		spriteScript = update_sprites;
 	}
 }

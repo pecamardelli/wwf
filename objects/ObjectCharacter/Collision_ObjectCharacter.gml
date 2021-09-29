@@ -9,7 +9,6 @@ if (abs(xDistance) <= CHARACTER_X_DISTANCE) xRange = true;
 if (abs(yDistance) <= CHARACTER_Y_DISTANCE) yRange = true;
 
 if (xRange && yRange) {
-	running = false;
 	x = approach(x, other.x - (CHARACTER_X_DISTANCE * sign(xDistance)), 1.2);
 	y = approach(y, other.y - (CHARACTER_X_DISTANCE * sign(yDistance)), 1);
 	other.x = approach(other.x, x + (CHARACTER_X_DISTANCE * sign(xDistance)), 1.5);

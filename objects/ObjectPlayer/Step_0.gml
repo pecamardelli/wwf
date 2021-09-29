@@ -5,8 +5,8 @@ get_depth();
 init_keys();
 get_keys();
 check_position();
-check_movement();
+
+if (!is_undefined(moveScript)) moveScript();
 check_attack();
-if (!attacking) {
-	if (!is_undefined(spriteScript)) spriteScript();
-}
+if (!is_undefined(attackScript)) attackScript();
+if (!is_undefined(spriteScript)) spriteScript();

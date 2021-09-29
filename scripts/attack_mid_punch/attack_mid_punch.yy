@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Basic",
-    "path": "folders/Scripts/Gameplay/Movement/Basic.yy",
+    "name": "Attacks",
+    "path": "folders/Scripts/Gameplay/Movement/Attacks.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hit_floor_script",
+  "name": "attack_mid_punch",
   "tags": [],
   "resourceType": "GMScript",
 }

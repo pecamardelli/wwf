@@ -19,8 +19,11 @@ data = {
 			select: ord("Space")
 		}
 	},
-	character: get_new_character(RANDOM),
+	character: get_new_character(DOINK),
 };
 
 maxHSpeed = data.character.walkSpeed;
 maxVSpeed = data.character.walkSpeed/2.5;
+
+moveScript = basic_movement;
+spriteScript = update_sprites;

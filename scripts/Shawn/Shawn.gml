@@ -10,6 +10,8 @@ function Shawn() constructor {
 			walkHorizontal: spriteDoinkWalkHorizontalFront,
 			walkVertical: spriteDoinkWalkVerticalFront,
 			walkDiagonal: spriteDoinkWalkDiagonalFront,
+			rotateX: spriteDoinkRotateXFront,
+			rotateY: spriteDoinkRotateYFront,
 			midPunch: spriteDoinkMidPunchFront,
 			getUp: spriteDoinkGetUpFront,
 		},
@@ -18,11 +20,10 @@ function Shawn() constructor {
 			walkHorizontal: spriteDoinkWalkHorizontalBack,
 			walkVertical: spriteDoinkWalkVerticalBack,
 			walkDiagonal: spriteDoinkWalkDiagonalBack,
+			rotateX: spriteDoinkRotateXBack,
+			rotateY: spriteDoinkRotateYBack,
 			midPunch: spriteDoinkMidPunchBack
 		},
-		rotateXFront: spriteDoinkRotateXFront,
-		rotateXBack: spriteDoinkRotateXBack,
-		rotateY: spriteDoinkRotateY,
 		run: spriteDoinkRun,
 		dropped: spriteDoinkDropped,
 		uppercut: spriteDoinkUppercut

@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-get_depth();
 target = get_target(ObjectPlayer);
+get_depth();
 init_keys();
 //get_keys();
-check_movement();
 check_position();
+if (!is_undefined(moveScript)) moveScript();
 check_attack();
-if (!attacking) update_sprites();
+if (!is_undefined(attackScript)) attackScript();
+if (!is_undefined(spriteScript)) spriteScript();

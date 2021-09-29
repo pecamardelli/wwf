@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Gameplay/Movement/Basic.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hit_floor_script",
+  "name": "basic_movement",
   "tags": [],
   "resourceType": "GMScript",
 }

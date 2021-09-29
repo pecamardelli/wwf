@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Movement",
-    "path": "folders/Scripts/Gameplay/Movement.yy",
+    "name": "Basic",
+    "path": "folders/Scripts/Gameplay/Movement/Basic.yy",
   },
   "resourceVersion": "1.0",
   "name": "dropped_script",

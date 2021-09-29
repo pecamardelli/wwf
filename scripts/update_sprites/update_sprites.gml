@@ -5,37 +5,34 @@ function update_sprites(){
 	if (is_undefined(target)) facing = FACING_RIGHT;
 	else {
 		facing = x <= target.x ? FACING_RIGHT : FACING_LEFT;
-		if (lastFacing != facing && !running) {
+		if (lastFacing != facing) {
 			rotate = ROTATE_X;
 			lastFacing = facing;
 		}
+		
 		position = floorY > target.y ? POSITION_BACK : POSITION_FRONT;
-		if (lastPosition != position && !running) {
+		if (lastPosition != position) {
 			rotate = ROTATE_Y;
 			lastPosition = position;
 		}
 	}
 	
-	if (running) {
+	if (moveScript == run) {
 		sprite_index = data.character.sprites.run;
 		image_speed = 1;
 	}
-	//else if (!onFloor) {
-	//	if (!is_undefined(notOnFloorScript)) notOnFloorScript();
-	//}
-	else {
+	else if (moveScript == basic_movement) {
 		switch (position) {
 			case POSITION_BACK:
 				var imageSpeedSign = -1;
 				var sprites = data.character.sprites.back;
 				switch (rotate) {
 					case ROTATE_X:
-						sprite_index = data.character.sprites.rotateXBack;
+						sprite_index = data.character.sprites.back.rotateX;
 						image_xscale = GAME_SCALE * -facing;
 						break;
 					case ROTATE_Y:
-						sprite_index = data.character.sprites.rotateY;
-						image_speed = 1;
+						sprite_index = data.character.sprites.front.rotateY;
 						break;
 				}
 				break;
@@ -44,12 +41,11 @@ function update_sprites(){
 				var sprites = data.character.sprites.front;
 				switch (rotate) {
 					case ROTATE_X:
-						sprite_index = data.character.sprites.rotateXFront;
+						sprite_index = data.character.sprites.front.rotateX;
 						image_xscale = GAME_SCALE * -facing;
 						break;
 					case ROTATE_Y:
-						sprite_index = data.character.sprites.rotateY;
-						image_speed = -1;
+						sprite_index = data.character.sprites.back.rotateY;
 						break;
 				}
 				break;

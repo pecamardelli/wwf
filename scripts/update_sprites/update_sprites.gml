@@ -2,26 +2,27 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function update_sprites(){
 // SPRITE CHANGE ON MOVEMENT
-	if (is_undefined(target)) facing = FACING_RIGHT;
-	else {
-		facing = x <= target.x ? FACING_RIGHT : FACING_LEFT;
-		if (lastFacing != facing) {
-			rotate = ROTATE_X;
-			lastFacing = facing;
-		}
-		
-		position = floorY > target.y ? POSITION_BACK : POSITION_FRONT;
-		if (lastPosition != position) {
-			rotate = ROTATE_Y;
-			lastPosition = position;
-		}
-	}
 	
 	if (moveScript == run) {
 		sprite_index = data.character.sprites.run;
 		image_speed = 1;
 	}
 	else if (moveScript == basic_movement) {
+		if (is_undefined(target)) facing = FACING_RIGHT;
+		else {
+			facing = x <= target.x ? FACING_RIGHT : FACING_LEFT;
+			if (lastFacing != facing) {
+				rotate = ROTATE_X;
+				lastFacing = facing;
+			}
+		
+			position = floorY > target.y ? POSITION_BACK : POSITION_FRONT;
+			if (lastPosition != position) {
+				rotate = ROTATE_Y;
+				lastPosition = position;
+			}
+		}
+		
 		switch (position) {
 			case POSITION_BACK:
 				var imageSpeedSign = -1;

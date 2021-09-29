@@ -9,6 +9,11 @@
 #macro FACING_LEFT		-1
 #macro FACING_RIGHT		1
 
+#macro IDLE				0x00
+#macro MOVING			0x01
+#macro RUNNING			0x02
+#macro ATTACKING		0x03
+
 #macro ROTATE_X		0x00
 #macro ROTATE_Y		0x01
 

@@ -27,5 +27,9 @@ function Doink() constructor {
 		run: spriteDoinkRun,
 		dropped: spriteDoinkDropped,
 		uppercut: spriteDoinkUppercut
-	}
+	};
+	
+	attacks = {};
+	variable_struct_set(attacks, BUTTON_A_ATTACK, attack_mid_punch);
+	
 }

@@ -1,3 +1,7 @@
+
+
+x = room_width/2;
+y = room_height/2;
 floorY = y;
 image_xscale = GAME_SCALE;
 image_yscale = GAME_SCALE;

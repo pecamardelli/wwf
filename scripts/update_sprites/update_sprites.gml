@@ -29,11 +29,11 @@ function update_sprites(){
 				var sprites = data.character.sprites.back;
 				switch (rotate) {
 					case ROTATE_X:
-						sprite_index = data.character.sprites.back.rotateX;
+						sprite_index = sprites.rotateX;
 						image_xscale = GAME_SCALE * -facing;
 						break;
 					case ROTATE_Y:
-						sprite_index = data.character.sprites.front.rotateY;
+						sprite_index = sprites.rotateY;
 						break;
 				}
 				break;
@@ -42,11 +42,11 @@ function update_sprites(){
 				var sprites = data.character.sprites.front;
 				switch (rotate) {
 					case ROTATE_X:
-						sprite_index = data.character.sprites.front.rotateX;
+						sprite_index = sprites.rotateX;
 						image_xscale = GAME_SCALE * -facing;
 						break;
 					case ROTATE_Y:
-						sprite_index = data.character.sprites.back.rotateY;
+						sprite_index = sprites.rotateY;
 						break;
 				}
 				break;

@@ -9,12 +9,8 @@ function basic_movement(){
 	else if (left) hspeed = -maxHSpeed;
 	else  hspeed = 0;
 	
-	if (up) {
-		vspeed = -maxVSpeed;
-	}
-	else if (down) {
-		vspeed = maxVSpeed;
-	}
+	if (up) vspeed = -maxVSpeed;
+	else if (down) vspeed = maxVSpeed;
 	else vspeed = 0;
 	
 	if (buttonY) moveScript = run;

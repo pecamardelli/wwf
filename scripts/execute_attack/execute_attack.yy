@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Characters",
-    "path": "folders/Scripts/Data/Constructors/Characters.yy",
+    "name": "Attacks",
+    "path": "folders/Scripts/Gameplay/Movement/Attacks.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Doink",
+  "name": "execute_attack",
   "tags": [],
   "resourceType": "GMScript",
 }

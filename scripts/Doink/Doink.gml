@@ -12,8 +12,7 @@ function Doink() constructor {
 			walkDiagonal: spriteDoinkWalkDiagonalFront,
 			rotateX: spriteDoinkRotateXFront,
 			rotateY: spriteDoinkRotateYFront,
-			midPunch: spriteDoinkMidPunchFront,
-			getUp: spriteDoinkGetUpFront,
+			midPunch: spriteDoinkMidPunchFront
 		},
 		back: {
 			idle: spriteDoinkIdleBack,
@@ -21,8 +20,7 @@ function Doink() constructor {
 			walkVertical: spriteDoinkWalkVerticalBack,
 			walkDiagonal: spriteDoinkWalkDiagonalBack,
 			rotateX: spriteDoinkRotateXBack,
-			rotateY: spriteDoinkRotateYBack,
-			midPunch: spriteDoinkMidPunchBack
+			rotateY: spriteDoinkRotateYBack
 		},
 		run: spriteDoinkRun,
 		dropped: spriteDoinkDropped,
@@ -30,6 +28,32 @@ function Doink() constructor {
 	};
 	
 	attacks = {};
-	variable_struct_set(attacks, BUTTON_A_ATTACK, attack_mid_punch);
 	
+	var mid_punch = new Attack(
+		{
+			front: spriteDoinkMidPunchFront,
+			back: spriteDoinkMidPunchBack
+		},
+		10,
+		[5],
+		undefined,
+		undefined
+	);
+	
+	variable_struct_set(attacks, ATTACK_MID_PUNCH, mid_punch);
+	
+	var uppercut = new Attack(
+		{
+			front: spriteDoinkUppercut,
+			back: spriteDoinkUppercut
+		},
+		40,
+		[5],
+		undefined,
+		function () {
+			show_debug_message("Hola")
+		}
+	);
+	
+	variable_struct_set(attacks, ATTACK_UPPERCUT, uppercut);
 }

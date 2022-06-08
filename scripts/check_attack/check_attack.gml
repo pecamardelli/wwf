@@ -5,5 +5,9 @@ function check_attack() {
 	
 	if (!canAttack || !is_undefined(attackScript) || is_undefined(attacks)) return;
 	
-	if (buttonA) attackScript = variable_struct_get(attacks, BUTTON_A_ATTACK);
+	var attack = undefined;
+	if (buttonA) attack = variable_struct_get(attacks, ATTACK_MID_PUNCH);
+	if (buttonX) attack = variable_struct_get(attacks, ATTACK_UPPERCUT);
+	
+	execute_attack(attack);
 }

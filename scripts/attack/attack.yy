@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Characters",
-    "path": "folders/Scripts/Data/Constructors/Characters.yy",
+    "name": "General",
+    "path": "folders/Scripts/Data/Constructors/General.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Doink",
+  "name": "Attack",
   "tags": [],
   "resourceType": "GMScript",
 }

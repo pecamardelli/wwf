@@ -45,6 +45,7 @@
     {"id":{"name":"finish_attack","path":"scripts/finish_attack/finish_attack.yy",},"order":2,},
     {"id":{"name":"spriteDoinkMidPunchBack","path":"sprites/spriteDoinkMidPunchBack/spriteDoinkMidPunchBack.yy",},"order":13,},
     {"id":{"name":"apply_force","path":"scripts/apply_force/apply_force.yy",},"order":0,},
+    {"id":{"name":"array_includes","path":"scripts/array_includes/array_includes.yy",},"order":1,},
     {"id":{"name":"General","path":"scripts/General/General.yy",},"order":0,},
     {"id":{"name":"Attack","path":"scripts/Attack/Attack.yy",},"order":0,},
     {"id":{"name":"Hitman","path":"scripts/Hitman/Hitman.yy",},"order":2,},
@@ -117,7 +118,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.5.1.14",
+    "IDEVersion": "2022.5.1.16",
   },
   "resourceVersion": "1.5",
   "name": "WWF",

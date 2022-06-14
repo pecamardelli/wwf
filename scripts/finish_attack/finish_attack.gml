@@ -3,4 +3,5 @@
 function finish_attack(){
 	canAttack = true;
 	moveScript = basic_movement;
+	attack = undefined;
 }

@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function execute_attack(attack) {
+function execute_attack() {
 	if(!is_struct(attack)) return;
 	
 	if (!is_undefined(attack.preScript)) attack.preScript();
@@ -18,7 +18,6 @@ function execute_attack(attack) {
 	image_speed = 1;
 	attackScript = undefined;
 	animationEndScript = finish_attack;
-	
 	
 	if (!is_undefined(attack.postScript)) attack.postScript();
 }

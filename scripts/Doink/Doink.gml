@@ -12,7 +12,8 @@ function Doink() constructor {
 			walkDiagonal: spriteDoinkWalkDiagonalFront,
 			rotateX: spriteDoinkRotateXFront,
 			rotateY: spriteDoinkRotateYFront,
-			midPunch: spriteDoinkMidPunchFront
+			midPunch: spriteDoinkMidPunchFront,
+			getUp: spriteDoinkGetUpFront
 		},
 		back: {
 			idle: spriteDoinkIdleBack,
@@ -20,7 +21,8 @@ function Doink() constructor {
 			walkVertical: spriteDoinkWalkVerticalBack,
 			walkDiagonal: spriteDoinkWalkDiagonalBack,
 			rotateX: spriteDoinkRotateXBack,
-			rotateY: spriteDoinkRotateYBack
+			rotateY: spriteDoinkRotateYBack,
+			getUp: spriteDoinkGetUpFront
 		},
 		run: spriteDoinkRun,
 		dropped: spriteDoinkDropped,
@@ -37,6 +39,7 @@ function Doink() constructor {
 		10,
 		[5],
 		undefined,
+		undefined,
 		undefined
 	);
 	
@@ -50,10 +53,15 @@ function Doink() constructor {
 		40,
 		[5],
 		undefined,
-		function () {
-			show_debug_message("Hola")
-		}
+		undefined,
+		hola
 	);
 	
 	variable_struct_set(attacks, ATTACK_UPPERCUT, uppercut);
+}
+
+function hola() {
+	apply_force(random_range(95,105),random_range(800,1000));
+	moveScript = undefined;
+	spriteScript = dropped_script;
 }

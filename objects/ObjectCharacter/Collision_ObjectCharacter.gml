@@ -13,6 +13,15 @@ if (xRange && yRange) {
 	y = approach(y, other.y - (CHARACTER_X_DISTANCE * sign(yDistance)), 1);
 	other.x = approach(other.x, x + (CHARACTER_X_DISTANCE * sign(xDistance)), 1.5);
 	other.y = approach(other.y, y + (CHARACTER_X_DISTANCE * sign(yDistance)), 1);
-	
-	
+}
+
+if (yRange) {	
+	if (!is_undefined(attack)) {
+		if (array_includes(attack.hitFrames, image_index)) {
+			var hitScript = attack.hitScript;
+			with (other) {
+				if (!is_undefined(hitScript)) hitScript();
+			}
+		}
+	}
 }

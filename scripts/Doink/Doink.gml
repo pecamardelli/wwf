@@ -36,7 +36,7 @@ function Doink() constructor {
 			front: spriteDoinkMidPunchFront,
 			back: spriteDoinkMidPunchBack
 		},
-		10,
+		80,
 		[5],
 		undefined,
 		undefined,
@@ -50,18 +50,16 @@ function Doink() constructor {
 			front: spriteDoinkUppercut,
 			back: spriteDoinkUppercut
 		},
-		40,
+		1200,
 		[5],
 		undefined,
 		undefined,
-		hola
+		hit_uppercut
 	);
 	
 	variable_struct_set(attacks, ATTACK_UPPERCUT, uppercut);
-}
-
-function hola() {
-	apply_force(random_range(95,105),random_range(800,1000));
-	moveScript = undefined;
-	spriteScript = dropped_script;
+	
+	sounds = {
+		swing: global.sounds.swing
+	};
 }

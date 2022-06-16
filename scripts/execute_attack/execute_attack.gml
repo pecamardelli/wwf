@@ -19,5 +19,8 @@ function execute_attack() {
 	attackScript = undefined;
 	animationEndScript = finish_attack;
 	
+	var swingSounds = variable_struct_get(data.character.sounds, "swing");
+	audio_play_sound(swingSounds[irandom(array_length(swingSounds)-1)],1,false);
+	
 	if (!is_undefined(attack.postScript)) attack.postScript();
 }

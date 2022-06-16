@@ -43,8 +43,8 @@ function Doink() constructor {
 		undefined,
 		hit_mid_punch,
 		{
-			swing: [ snd_swing_04, snd_swing_05, snd_swing_06 ,snd_swing_07 ],
-			hit: [ snd_punch_06, snd_punch_08, snd_punch_09, snd_punch_11 ]
+			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
+			hit: [ sndPunch06, sndPunch08, sndPunch09, sndPunch11 ]
 		}
 	);
 	
@@ -62,7 +62,7 @@ function Doink() constructor {
 		hit_uppercut,
 		{
 			swing: global.sounds.swing,
-			hit: [ snd_punch_04 ]
+			hit: [ sndPunch04 ]
 		}
 	);
 	

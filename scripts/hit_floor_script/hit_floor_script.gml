@@ -4,12 +4,9 @@ function hit_floor_script(){
 	if (image_index == sprite_get_number(sprite_index)) {
 		image_speed = 0;
 		if (is_undefined(alarmScript)) {
-			alarmScript = get_up_script;
+			alarmScript = function () { spriteScript = get_up };
 			alarm_set(0,1*room_speed);
 		}
 	}
 }
 
-function get_up_script() {
-	spriteScript = get_up;
-}

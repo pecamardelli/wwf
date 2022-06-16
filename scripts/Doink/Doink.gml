@@ -12,7 +12,7 @@ function Doink() constructor {
 			walkDiagonal: spriteDoinkWalkDiagonalFront,
 			rotateX: spriteDoinkRotateXFront,
 			rotateY: spriteDoinkRotateYFront,
-			midPunch: spriteDoinkMidPunchFront,
+			facePunched: spriteDoinkFacePunchedFront,
 			getUp: spriteDoinkGetUpFront
 		},
 		back: {
@@ -22,6 +22,7 @@ function Doink() constructor {
 			walkDiagonal: spriteDoinkWalkDiagonalBack,
 			rotateX: spriteDoinkRotateXBack,
 			rotateY: spriteDoinkRotateYBack,
+			facePunched: spriteDoinkFacePunchedBack,
 			getUp: spriteDoinkGetUpFront
 		},
 		run: spriteDoinkRun,
@@ -40,7 +41,11 @@ function Doink() constructor {
 		[5],
 		undefined,
 		undefined,
-		undefined
+		hit_mid_punch,
+		{
+			swing: [ snd_swing_04, snd_swing_05, snd_swing_06 ,snd_swing_07 ],
+			hit: [ snd_punch_06, snd_punch_08, snd_punch_09, snd_punch_11 ]
+		}
 	);
 	
 	variable_struct_set(attacks, ATTACK_MID_PUNCH, mid_punch);
@@ -54,12 +59,12 @@ function Doink() constructor {
 		[5],
 		undefined,
 		undefined,
-		hit_uppercut
+		hit_uppercut,
+		{
+			swing: global.sounds.swing,
+			hit: [ snd_punch_04 ]
+		}
 	);
 	
 	variable_struct_set(attacks, ATTACK_UPPERCUT, uppercut);
-	
-	sounds = {
-		swing: global.sounds.swing
-	};
 }

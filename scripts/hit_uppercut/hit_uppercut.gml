@@ -6,6 +6,14 @@ function hit_uppercut(){
 	moveScript = undefined;
 	spriteScript = dropped_script;
 	
+	// Play a sound defined in attack definition of character.
+	var hitSounds = variable_struct_get(other.attack.sounds, "hit");
+	play_random_sound(hitSounds);
+	
+	// Play a random punch sound along with predefined sound.
+	var globalPunchSounds = variable_struct_get(global.sounds, "punches");
+	play_random_sound(globalPunchSounds);
+	
 	with (other) {
 		alarmScript = function () { image_speed = 1; }
 		image_speed = 0;

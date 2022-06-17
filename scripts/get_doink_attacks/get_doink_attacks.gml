@@ -1,0 +1,45 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function get_doink_attacks(){
+	var attacks = {};
+	
+	var mid_punch = new Attack(
+		ATTACK_MID_PUNCH,
+		{
+			front: spriteDoinkMidPunchFront,
+			back: spriteDoinkMidPunchBack
+		},
+		80,
+		[5],
+		undefined,
+		undefined,
+		hit_mid_punch,
+		{
+			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
+			hit: [ sndPunch06, sndPunch08, sndPunch09, sndPunch11 ]
+		}
+	);
+	
+	variable_struct_set(attacks, ATTACK_MID_PUNCH, mid_punch);
+	
+	var uppercut = new Attack(
+		ATTACK_UPPERCUT,
+		{
+			front: spriteDoinkUppercut,
+			back: spriteDoinkUppercut
+		},
+		1500,
+		[5],
+		undefined,
+		undefined,
+		hit_uppercut,
+		{
+			swing: global.sounds.swing,
+			hit: [ sndPunch04 ]
+		}
+	);
+	
+	variable_struct_set(attacks, ATTACK_UPPERCUT, uppercut);
+	
+	return attacks;
+}

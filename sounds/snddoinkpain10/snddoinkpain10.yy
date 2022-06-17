@@ -12,10 +12,10 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snddoinkpain10.wav",
-  "duration": 0.495283,
+  "duration": 0.57542,
   "parent": {
-    "name": "Doink",
-    "path": "folders/Sounds/Characters/Doink.yy",
+    "name": "Pain",
+    "path": "folders/Sounds/Characters/Doink/Pain.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndDoinkPain10",

@@ -30,41 +30,9 @@ function Doink() constructor {
 		uppercut: spriteDoinkUppercut
 	};
 	
-	attacks = {};
+	attacks = get_doink_attacks();
+	sounds = {};
 	
-	var mid_punch = new Attack(
-		{
-			front: spriteDoinkMidPunchFront,
-			back: spriteDoinkMidPunchBack
-		},
-		80,
-		[5],
-		undefined,
-		undefined,
-		hit_mid_punch,
-		{
-			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
-			hit: [ sndPunch06, sndPunch08, sndPunch09, sndPunch11 ]
-		}
-	);
-	
-	variable_struct_set(attacks, ATTACK_MID_PUNCH, mid_punch);
-	
-	var uppercut = new Attack(
-		{
-			front: spriteDoinkUppercut,
-			back: spriteDoinkUppercut
-		},
-		1200,
-		[5],
-		undefined,
-		undefined,
-		hit_uppercut,
-		{
-			swing: global.sounds.swing,
-			hit: [ sndPunch04 ]
-		}
-	);
-	
-	variable_struct_set(attacks, ATTACK_UPPERCUT, uppercut);
+	var painSounds = {};
+	variable_struct_set(painSounds, ATTACK_MID_PUNCH, []);
 }

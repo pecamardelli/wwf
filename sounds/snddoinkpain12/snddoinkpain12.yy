@@ -14,8 +14,8 @@
   "soundFile": "snddoinkpain12.wav",
   "duration": 0.87322,
   "parent": {
-    "name": "Doink",
-    "path": "folders/Sounds/Characters/Doink.yy",
+    "name": "Pain",
+    "path": "folders/Sounds/Characters/Doink/Pain.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndDoinkPain12",

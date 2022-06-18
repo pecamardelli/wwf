@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snddoinkattack01.wav",
-  "duration": 1.312812,
+  "soundFile": "snddoinkattack09.wav",
+  "duration": 0.293469,
   "parent": {
     "name": "Attack",
     "path": "folders/Sounds/Characters/Doink/Attack.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndDoinkAttack01",
+  "name": "sndDoinkAttack09",
   "tags": [],
   "resourceType": "GMSound",
 }

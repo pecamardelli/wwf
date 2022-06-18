@@ -75,7 +75,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 90,
-    "yorigin": 145,
+    "yorigin": 153,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spriteDoinkUppercut","path":"sprites/spriteDoinkUppercut/spriteDoinkUppercut.yy",},

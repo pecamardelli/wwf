@@ -20,7 +20,10 @@ function execute_attack() {
 	animationEndScript = finish_attack;
 	
 	var swingSounds = variable_struct_get(attack.sounds, "swing");
-	audio_play_sound(swingSounds[irandom(array_length(swingSounds)-1)],1,false);
+	play_random_sound(swingSounds);
+	
+	var attackgSounds = variable_struct_get(attack.sounds, "attack");
+	play_random_sound(attackgSounds);
 	
 	if (!is_undefined(attack.postScript)) attack.postScript();
 }

@@ -27,7 +27,8 @@ function Doink() constructor {
 		},
 		run: spriteDoinkRun,
 		dropped: spriteDoinkDropped,
-		uppercut: spriteDoinkUppercut
+		uppercut: spriteDoinkUppercut,
+		defence: spriteDoinkDefence
 	};
 	
 	attacks = get_doink_attacks();

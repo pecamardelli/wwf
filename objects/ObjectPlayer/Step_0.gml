@@ -6,6 +6,7 @@ init_keys();
 get_keys();
 check_position();
 
+check_defence();
 if (!is_undefined(moveScript)) moveScript();
 check_attack();
 if (!is_undefined(attackScript)) attackScript();

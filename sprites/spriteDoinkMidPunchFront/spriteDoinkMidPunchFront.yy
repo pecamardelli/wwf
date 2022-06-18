@@ -83,7 +83,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 90,
-    "yorigin": 145,
+    "yorigin": 143,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spriteDoinkMidPunchFront","path":"sprites/spriteDoinkMidPunchFront/spriteDoinkMidPunchFront.yy",},

@@ -16,7 +16,8 @@ function get_doink_attacks(){
 		hit_mid_punch,
 		{
 			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
-			hit: [ sndPunch06, sndPunch08, sndPunch09, sndPunch11 ]
+			hit: [ sndPunch06, sndPunch08, sndPunch09, sndPunch11 ],
+			attack: [ sndDoinkAttack08, sndDoinkAttack09, sndDoinkAttack10 ]
 		}
 	);
 	
@@ -35,7 +36,8 @@ function get_doink_attacks(){
 		hit_uppercut,
 		{
 			swing: global.sounds.swing,
-			hit: [ sndPunch04 ]
+			hit: [ sndPunch04 ],
+			attack: [ sndDoinkAttack08, sndDoinkAttack10, sndDoinkAttack11 ]
 		}
 	);
 	

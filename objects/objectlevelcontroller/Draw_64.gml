@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_health_bar(ObjectPlayer);
+if (instance_exists(ObjectPlayer)) draw_health_bar(ObjectPlayer);
 
-draw_health_bar(ObjectEnemy);
+if (!is_undefined(ObjectPlayer.target)) draw_health_bar(ObjectPlayer.target);

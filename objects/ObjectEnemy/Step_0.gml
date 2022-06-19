@@ -12,3 +12,4 @@ if (!is_undefined(moveScript)) moveScript();
 check_attack();
 if (!is_undefined(attackScript)) attackScript();
 if (!is_undefined(spriteScript)) spriteScript();
+if (!is_undefined(endOfLifeScript)) endOfLifeScript();

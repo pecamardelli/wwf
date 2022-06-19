@@ -11,6 +11,13 @@ function check_health(){
 			var angle = arccos(-facing)*180/pi;
 			apply_force(angle,300);
 			onFloor = false;
+			alarmScript = function() {
+				endOfLifeScript = function() {
+					image_alpha = approach(image_alpha,0,0.02);
+					if (image_alpha <= 0) instance_destroy();
+				}
+			}
+			alarm_set(0,room_speed*3)
 		}
 	}
 	else healthOnBar = approach(healthOnBar,currentHealth,5);

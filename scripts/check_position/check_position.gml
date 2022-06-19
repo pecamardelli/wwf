@@ -6,8 +6,7 @@ function check_position(){
 		if (y >= floorY) {
 			y = floorY;
 			if (rebound) {
-				var angle = 90 + 12 * facing;
-				apply_force(angle,600);
+				apply_force(90 + 5*facing, 600);
 				rebound = false;
 			}
 			else {

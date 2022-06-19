@@ -10,6 +10,7 @@ function get_doink_attacks(){
 			back: spriteDoinkMidPunchBack
 		},
 		80,
+		50,
 		[5],
 		undefined,
 		undefined,
@@ -30,6 +31,7 @@ function get_doink_attacks(){
 			back: spriteDoinkUppercut
 		},
 		1500,
+		180,
 		[5],
 		undefined,
 		undefined,

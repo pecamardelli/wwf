@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function hit_uppercut(){
 	var angle = 90 + random_range(3,12) * facing;
-	apply_force(angle,other.attack.damage);
+	apply_force(angle,other.attack.force);
 	moveScript = undefined;
 	spriteScript = dropped_script;
 	
@@ -21,4 +21,5 @@ function hit_uppercut(){
 		apply_force(arccos(-facing)*180/pi, random_range(8,15));
 		alarm_set(0, 0.2 * room_speed);
 	}
+	currentHealth -= other.attack.damage;
 }

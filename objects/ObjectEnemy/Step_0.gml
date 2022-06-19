@@ -5,6 +5,7 @@ get_depth();
 init_keys();
 //get_keys();
 
+check_health();
 check_dropped();
 check_position();
 if (!is_undefined(moveScript)) moveScript();

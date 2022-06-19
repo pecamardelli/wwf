@@ -15,7 +15,7 @@ if (xRange && yRange) {
 	other.y = approach(other.y, y + (CHARACTER_X_DISTANCE * sign(yDistance)), 1);
 }
 
-if (yRange) {	
+if (yRange && other.canBeHit) {	
 	if (!is_undefined(attack)) {
 		if (array_includes(attack.hitFrames, image_index)) {
 			var hitScript = attack.hitScript;

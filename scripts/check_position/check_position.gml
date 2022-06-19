@@ -4,9 +4,17 @@ function check_position(){
 	if (!onFloor) {
 		apply_gravity();
 		if (y >= floorY) {
-			onFloor = true;
-			vspeed = 0;
 			y = floorY;
+			if (rebound) {
+				var angle = 90 + 12 * facing;
+				apply_force(angle,600);
+				rebound = false;
+			}
+			else {
+				vspeed = 0;
+				onFloor = true;
+				rebound = true;
+			}
 		}
 	}
 	else floorY = y;

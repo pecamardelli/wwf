@@ -6,5 +6,5 @@ function check_dropped(){
 	if (image_index != sprite_get_number(sprite_index)) return;
 	if (current_time - droppedTime < maxDroppedTime) return;
 	
-	spriteScript = get_up;
+	if (currentHealth > 0) spriteScript = get_up;
 }

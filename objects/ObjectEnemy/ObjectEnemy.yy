@@ -27,7 +27,9 @@
     {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"healthBarX","path":"objects/ObjectCharacter/ObjectCharacter.yy",},"objectId":{"name":"ObjectCharacter","path":"objects/ObjectCharacter/ObjectCharacter.yy",},"value":"room_width - ObjectLevelController.healthBarWidth - 100","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Players",
     "path": "folders/Objects/Players.yy",

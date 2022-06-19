@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snddoinkattack05.wav",
-  "duration": 0.917982,
+  "duration": 0.7,
   "parent": {
     "name": "Attack",
     "path": "folders/Sounds/Characters/Doink/Attack.yy",

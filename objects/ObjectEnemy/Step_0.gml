@@ -4,6 +4,8 @@ target = get_target(ObjectPlayer);
 get_depth();
 init_keys();
 //get_keys();
+
+check_dropped();
 check_position();
 if (!is_undefined(moveScript)) moveScript();
 check_attack();

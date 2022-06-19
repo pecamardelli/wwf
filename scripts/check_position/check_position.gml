@@ -6,6 +6,7 @@ function check_position(){
 		if (y >= floorY) {
 			onFloor = true;
 			vspeed = 0;
+			y = floorY;
 		}
 	}
 	else floorY = y;

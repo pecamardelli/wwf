@@ -15,6 +15,7 @@
     {"id":{"name":"spriteDoinkWalkHorizontalBack","path":"sprites/spriteDoinkWalkHorizontalBack/spriteDoinkWalkHorizontalBack.yy",},"order":9,},
     {"id":{"name":"spriteDoinkWalkDiagonalFront","path":"sprites/spriteDoinkWalkDiagonalFront/spriteDoinkWalkDiagonalFront.yy",},"order":4,},
     {"id":{"name":"init_keys","path":"scripts/init_keys/init_keys.yy",},"order":0,},
+    {"id":{"name":"check_dropped","path":"scripts/check_dropped/check_dropped.yy",},"order":7,},
     {"id":{"name":"update_sprites","path":"scripts/update_sprites/update_sprites.yy",},"order":4,},
     {"id":{"name":"spriteDoinkRotateYFront","path":"sprites/spriteDoinkRotateYFront/spriteDoinkRotateYFront.yy",},"order":14,},
     {"id":{"name":"sndDoinkAttack03","path":"sounds/sndDoinkAttack03/sndDoinkAttack03.yy",},"order":2,},

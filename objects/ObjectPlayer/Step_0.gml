@@ -4,8 +4,9 @@ target = get_target(ObjectEnemy);
 get_depth();
 init_keys();
 get_keys();
-check_position();
 
+check_dropped();
+check_position();
 check_defence();
 if (!is_undefined(moveScript)) moveScript();
 check_attack();

@@ -26,14 +26,14 @@ function draw_health_bar(character){
 	draw_roundrect_color_ext(backgroundX1,backgroundY1,backgroundX2,backgroundY2,5,5,c_white,c_white,false);
 	
 	if (character.healthOnBar > 0) {
-		var healthPercent = character.currentHealth / character.maxHealth * 100;
+		var healthPercent = character.healthOnBar / character.maxHealth * 100;
 		
 		if (healthPercent <= healthBarColorDangerThreshold) {
 			var mergeAmount = healthPercent / healthBarColorDangerThreshold;
 			var healthBarColor = merge_color(healthBarColorDanger, healthBarColorWarning, mergeAmount);
 		}
 		else if (healthPercent <= healthBarColorWarningThreshold) {
-			var mergeAmount = healthPercent / healthBarColorWarningThreshold;
+			var mergeAmount = (healthPercent - healthBarColorDangerThreshold) / (healthBarColorWarningThreshold - healthBarColorDangerThreshold);
 			var healthBarColor = merge_color(healthBarColorWarning, healthBarColorDefault, mergeAmount);
 		}
 		else var healthBarColor = healthBarColorDefault;

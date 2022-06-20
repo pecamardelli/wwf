@@ -18,9 +18,14 @@ if (xRange && yRange) {
 if (yRange && other.canBeHit) {	
 	if (!is_undefined(attack)) {
 		if (array_includes(attack.hitFrames, image_index)) {
-			var hitScript = attack.hitScript;
-			with (other) {
-				if (!is_undefined(hitScript)) hitScript();
+			switch (other.status) {
+				case BLOCKING: with (other) block_script(); break;
+				default:
+					var hitScript = attack.hitScript;
+					with (other) {
+						if (!is_undefined(hitScript)) hitScript();
+					}
+					break;
 			}
 		}
 	}

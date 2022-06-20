@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function hit_mid_punch(){
 	var angle = arccos(-facing)*180/pi;
+	
 	apply_force(angle, other.attack.force);
 	moveScript = undefined;
 	
@@ -20,7 +21,11 @@ function hit_mid_punch(){
 	
 	// Play a sound defined in attack definition of character.
 	var hitSounds = variable_struct_get(other.attack.sounds, "hit");
-	play_random_sound(hitSounds);
+	play_random_sound(hitSounds, other.audioEmitter);
+	
+	// Play a sound defined in attack definition of character.
+	var painSounds = variable_struct_get(data.character.sounds.painSounds, ATTACK_MID_PUNCH);
+	play_random_sound(painSounds);
 	
 	currentHealth -= other.attack.damage;
 }

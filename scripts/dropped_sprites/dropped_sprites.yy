@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Hits",
-    "path": "folders/Scripts/Gameplay/Movement/Attacks/Hits.yy",
+    "name": "Basic",
+    "path": "folders/Scripts/Gameplay/Movement/Basic.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hit_mid_punch",
+  "name": "dropped_sprites",
   "tags": [],
   "resourceType": "GMScript",
 }

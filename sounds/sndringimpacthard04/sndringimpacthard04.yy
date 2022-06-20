@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndringimpacthard04.wav",
-  "duration": 1.379524,
+  "duration": 1.03068,
   "parent": {
     "name": "General",
     "path": "folders/Sounds/General.yy",

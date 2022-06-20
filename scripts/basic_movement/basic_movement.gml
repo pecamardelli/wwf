@@ -13,7 +13,23 @@ function basic_movement(){
 	else if (down) vspeed = maxVSpeed;
 	else vspeed = 0;
 	
-	if (buttonY) moveScript = run;
+	if (buttonB) {
+		if (status != BLOCKING) {
+			audio_play_sound(sndSwing03,1,false);
+			speed = 0;
+			canAttack = false;
+			status = BLOCKING;
+			spriteScript = block_sprites;
+		}
+		return;
+	}
+	else if (buttonY) {
+		moveScript = run;
+		status = RUNNING;
+	}
 	
-	if (!moveX && !moveY) hspeed = approach(hspeed,0,0.1);
+	if (moveY) floorY = y;
+	
+	if (moveX || moveY) status = WALKING;
+	else status = IDLE;
 }

@@ -7,6 +7,9 @@ function update_sprites(){
 		sprite_index = data.character.sprites.run;
 		image_speed = 1;
 	}
+	else if (moveScript == run) {
+		
+	}
 	else if (moveScript == basic_movement) {
 		if (is_undefined(target)) facing = FACING_RIGHT;
 		else {

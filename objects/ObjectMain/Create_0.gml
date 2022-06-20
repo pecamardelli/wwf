@@ -28,6 +28,12 @@ global.sounds = {
 		sndPunch12,
 		sndPunch13,
 	],
+	block: [
+		sndPunch06,
+		sndPunch10,
+		sndPunch12,
+		sndPunch13,
+	],
 	ringImpact: {
 		soft: [ sndRingImpactSoft01, sndRingImpactSoft02 ],
 		hard: [

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Hits",
-    "path": "folders/Scripts/Gameplay/Movement/Attacks/Hits.yy",
+    "name": "Blocks",
+    "path": "folders/Scripts/Gameplay/Movement/Attacks/Blocks.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hit_mid_punch",
+  "name": "block_script",
   "tags": [],
   "resourceType": "GMScript",
 }

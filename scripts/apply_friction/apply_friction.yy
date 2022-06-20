@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Hits",
-    "path": "folders/Scripts/Gameplay/Movement/Attacks/Hits.yy",
+    "name": "External",
+    "path": "folders/Scripts/Gameplay/Movement/External.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hit_mid_punch",
+  "name": "apply_friction",
   "tags": [],
   "resourceType": "GMScript",
 }

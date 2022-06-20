@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Basic",
-    "path": "folders/Scripts/Gameplay/Movement/Basic.yy",
+    "name": "External",
+    "path": "folders/Scripts/Gameplay/Movement/External.yy",
   },
   "resourceVersion": "1.0",
-  "name": "dropped_script",
+  "name": "environment",
   "tags": [],
   "resourceType": "GMScript",
 }

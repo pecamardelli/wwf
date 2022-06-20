@@ -16,11 +16,12 @@
 
 // Entity statuses
 #macro IDLE						0x00
-#macro MOVING					0x01
+#macro WALKING					0x01
 #macro RUNNING					0x02
 #macro ATTACKING				0x03
-#macro READY_FOR_TERMINATION	0x04
-#macro ABOUT_TO_TERMINATE		0x05
+#macro BLOCKING					0x04
+#macro READY_FOR_TERMINATION	0x05
+#macro ABOUT_TO_TERMINATE		0x06
 
 #macro ROTATE_X		0x00
 #macro ROTATE_Y		0x01

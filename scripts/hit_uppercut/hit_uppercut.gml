@@ -4,7 +4,7 @@ function hit_uppercut(){
 	var angle = 90 + random_range(3,12) * facing;
 	apply_force(angle,other.attack.force);
 	moveScript = undefined;
-	spriteScript = dropped_script;
+	spriteScript = dropped_sprites;
 	
 	// Play a sound defined in attack definition of character.
 	var hitSounds = variable_struct_get(other.attack.sounds, "hit");

@@ -1,6 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//apply_force(110,900);
-//moveScript = undefined;
-//spriteScript = dropped_sprites;
+instance_create_depth(room_width * random(1), room_height * 0.66,1,ObjectEnemy);

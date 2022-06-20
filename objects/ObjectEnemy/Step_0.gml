@@ -4,13 +4,13 @@ target = get_target(ObjectPlayer);
 get_depth();
 init_keys();
 //get_keys();
+buttonB = true;
 
-check_status();
 check_health();
+check_status();
 check_dropped();
 check_position();
-if (!is_undefined(moveScript)) moveScript();
 check_attack();
-if (!is_undefined(attackScript)) attackScript();
+if (!is_undefined(moveScript)) moveScript();
 if (!is_undefined(spriteScript)) spriteScript();
 if (!is_undefined(endOfLifeScript)) endOfLifeScript();

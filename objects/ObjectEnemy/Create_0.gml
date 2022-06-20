@@ -2,7 +2,7 @@ floorY = y;
 image_xscale = GAME_SCALE;
 image_yscale = GAME_SCALE;
 
-currentHealth = 50;
+currentHealth = 5;
 
 data = {
 	keys: {

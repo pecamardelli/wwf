@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndbodydrop02.wav",
-  "duration": 0.852336,
+  "duration": 1.109433,
   "parent": {
     "name": "General",
     "path": "folders/Sounds/General.yy",

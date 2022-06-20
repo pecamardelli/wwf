@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function play_random_sound(soundArray, customAudioEmitter){
+function play_random_sound(soundArray, customAudioEmitter, gain){
 	if (!is_array(soundArray)) return undefined;
 	if (array_length(soundArray) == 0) return undefined;
 	
@@ -8,6 +8,11 @@ function play_random_sound(soundArray, customAudioEmitter){
 	
 	if (!is_undefined(customAudioEmitter)) var _audioEmitter = customAudioEmitter;
 	else var _audioEmitter = audioEmitter;
+	
+	var previousGain = audio_emitter_get_gain(_audioEmitter);
+	
+	if(!is_undefined(gain)) audio_emitter_gain(_audioEmitter, gain);
+	else audio_emitter_gain(_audioEmitter, previousGain);
 	
 	return audio_play_sound_on(_audioEmitter,randomSound,false,1);
 }

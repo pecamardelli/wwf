@@ -100,6 +100,7 @@
     {"id":{"name":"check_defence","path":"scripts/check_defence/check_defence.yy",},"order":6,},
     {"id":{"name":"sndDoinkPain06","path":"sounds/sndDoinkPain06/sndDoinkPain06.yy",},"order":5,},
     {"id":{"name":"spriteDoinkMidPunchBack","path":"sprites/spriteDoinkMidPunchBack/spriteDoinkMidPunchBack.yy",},"order":13,},
+    {"id":{"name":"check_status","path":"scripts/check_status/check_status.yy",},"order":9,},
     {"id":{"name":"sndSwing05","path":"sounds/sndSwing05/sndSwing05.yy",},"order":4,},
     {"id":{"name":"sndDoinkPain07","path":"sounds/sndDoinkPain07/sndDoinkPain07.yy",},"order":6,},
     {"id":{"name":"sndSwing06","path":"sounds/sndSwing06/sndSwing06.yy",},"order":5,},

@@ -6,10 +6,12 @@ function check_position(){
 		if (y >= floorY) {
 			y = floorY;
 			if (rebound) {
-				apply_force(90 + 5*facing, 600);
+				play_random_sound(global.sounds.ringImpact.hard);
+				apply_force(90 + 5*facing, 300);
 				rebound = false;
 			}
 			else {
+				play_random_sound(global.sounds.ringImpact.soft);
 				vspeed = 0;
 				onFloor = true;
 				rebound = true;

@@ -9,7 +9,7 @@ function check_health(){
 		if (spriteScript != dropped_script && spriteScript != hit_floor_script) {
 			spriteScript = dropped_script;
 			var angle = arccos(-facing)*180/pi;
-			apply_force(angle,300);
+			apply_force(angle,200);
 			onFloor = false;
 			alarmScript = function() {
 				endOfLifeScript = function() {

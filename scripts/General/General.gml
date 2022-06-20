@@ -1,6 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 #macro GAME_SCALE		2
+#macro PIXELS_PER_METER	115/1.83
+
+// Doink's sprite height is 115px and he's 6 ft tall, so
+// the formula for gravity would be something like this:
+#macro GRAVITY	PIXELS_PER_METER*9.8/900
 
 #macro RANDOM	"random"
 

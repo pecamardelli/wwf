@@ -27,5 +27,17 @@ global.sounds = {
 		sndPunch11,
 		sndPunch12,
 		sndPunch13,
-	]
+	],
+	ringImpact: {
+		soft: [ sndRingImpactSoft01, sndRingImpactSoft02 ],
+		hard: [
+			sndRingImpactHard01,
+			sndRingImpactHard02,
+			sndRingImpactHard03,
+			sndRingImpactHard04,
+			sndRingImpactHard05,
+			sndRingImpactHard06
+		]
+	},
+	bodyDrop: [ sndBodyDrop01, sndBodyDrop02 ]
 };

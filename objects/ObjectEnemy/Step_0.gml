@@ -4,7 +4,7 @@ target = get_target(ObjectPlayer);
 get_depth();
 init_keys();
 //get_keys();
-buttonB = true;
+//buttonB = true;
 
 check_health();
 check_status();

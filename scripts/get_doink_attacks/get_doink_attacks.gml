@@ -5,13 +5,11 @@ function get_doink_attacks(){
 	
 	var mid_punch = new Attack(
 		ATTACK_MID_PUNCH,
-		{
-			front: spriteDoinkMidPunchFront,
-			back: spriteDoinkMidPunchBack
-		},
+		{ front: spriteDoinkMidPunchFront, back: spriteDoinkMidPunchBack },
 		80,
 		50,
 		[5],
+		{ x: 30, y: 85, width: 32, height: 10 },
 		undefined,
 		undefined,
 		hit_mid_punch,
@@ -33,6 +31,7 @@ function get_doink_attacks(){
 		1200,
 		180,
 		[5],
+		{ x: 41, y: 82, width: 24, height: 21 },
 		undefined,
 		undefined,
 		hit_uppercut,

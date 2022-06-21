@@ -9,6 +9,26 @@ function execute_attack() {
 	speed = 0;
 	canAttack = false;
 	
+	var collisionMaskWidth = attack.collisionMask.width * GAME_SCALE * facing;
+	var collisionMaskHeight = attack.collisionMask.height * GAME_SCALE;
+	var collisionMaskX = x + attack.collisionMask.x * GAME_SCALE * facing;
+	var collisionMaskY = y - attack.collisionMask.y * GAME_SCALE;
+	
+	attackCollisionMaskId = instance_create_depth(
+		collisionMaskX,
+		collisionMaskY,
+		depth,
+		ObjectAttackCollisionMask
+	);
+
+	attackCollisionMaskId.creatorId = id;
+	
+	with (attackCollisionMaskId) {
+		var newSprite = sprite_duplicate(spriteTransparent);
+		sprite_collision_mask(newSprite,false,bboxkind_rectangular,0,0,collisionMaskWidth,collisionMaskHeight,1,0);
+		sprite_index = newSprite;
+	}
+	
 	switch (position) {
 		case POSITION_BACK: sprite_index = attack.sprites.back; break;
 		case POSITION_FRONT: sprite_index = attack.sprites.front; break;

@@ -14,3 +14,17 @@ if (xRange && yRange) {
 	other.x = approach(other.x, x + (CHARACTER_X_DISTANCE * sign(xDistance)), 1.5);
 	other.y = approach(other.y, y + (CHARACTER_X_DISTANCE * sign(yDistance)), 1);
 }
+
+if (yRange && other.canBeHit && target == other.id) {
+	if (!is_undefined(attack)) {
+		if (array_includes(attack.hitFrames, image_index)) {
+			switch (status) {
+				case BLOCKING: with (other) block_script(); break;
+				default:
+					var hitScript = attack.hitScript;
+					if (!is_undefined(hitScript)) with (other) hitScript();
+					break;
+			}
+		}
+	}
+}

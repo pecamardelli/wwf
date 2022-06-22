@@ -17,7 +17,7 @@ function hit_uppercut(){
 	with (other) {
 		alarmScript = function () { image_speed = 1; }
 		image_speed = 0;
-		image_index = attack.hitFrames[0] - 1;
+		image_index = attack.hitFrames[0];
 		apply_force(arccos(-facing)*180/pi, random_range(8,15));
 		alarm_set(0, 0.2 * room_speed);
 	}

@@ -24,4 +24,5 @@ function hit_mid_punch(){
 	play_random_sound(painSounds);
 	
 	currentHealth -= other.attack.damage;
+	other.attack = undefined;
 }

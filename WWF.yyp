@@ -39,6 +39,7 @@
     {"id":{"name":"sndRingImpactHard06","path":"sounds/sndRingImpactHard06/sndRingImpactHard06.yy",},"order":17,},
     {"id":{"name":"sndDoinkAttack10","path":"sounds/sndDoinkAttack10/sndDoinkAttack10.yy",},"order":9,},
     {"id":{"name":"sndRingImpactHard05","path":"sounds/sndRingImpactHard05/sndRingImpactHard05.yy",},"order":16,},
+    {"id":{"name":"ObjectDeadCharacter","path":"objects/ObjectDeadCharacter/ObjectDeadCharacter.yy",},"order":3,},
     {"id":{"name":"RoomScenery","path":"rooms/RoomScenery/RoomScenery.yy",},"order":1,},
     {"id":{"name":"sndDoinkPain05","path":"sounds/sndDoinkPain05/sndDoinkPain05.yy",},"order":4,},
     {"id":{"name":"sndPunch11","path":"sounds/sndPunch11/sndPunch11.yy",},"order":10,},

@@ -22,4 +22,5 @@ function hit_uppercut(){
 		alarm_set(0, 0.2 * room_speed);
 	}
 	currentHealth -= other.attack.damage;
+	other.attack = undefined;
 }

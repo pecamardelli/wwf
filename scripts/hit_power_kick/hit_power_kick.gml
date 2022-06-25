@@ -10,9 +10,15 @@ function hit_power_kick(){
 		else image_speed = 1;
 	}
 	
-	switch (position) {
-		case POSITION_BACK: sprite_index = data.character.sprites.back.facePunched; break;	
-		case POSITION_FRONT: sprite_index = data.character.sprites.front.facePunched; break;
+	if (status != DROPPED) {
+		switch (position) {
+			case POSITION_BACK: sprite_index = data.character.sprites.back.facePunched; break;	
+			case POSITION_FRONT: sprite_index = data.character.sprites.front.facePunched; break;
+		}
+	}
+	else {
+		image_index = 1;
+		apply_force(90,other.attack.force*2);
 	}
 	
 	animationEndScript = function () {

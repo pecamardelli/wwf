@@ -85,7 +85,7 @@ function get_doink_attacks(){
 		},
 		200,
 		100,
-		[4],
+		[4,5],
 		method(ObjectCharacter, function() { apply_force(45,200) }),
 		undefined,
 		hit_power_kick,

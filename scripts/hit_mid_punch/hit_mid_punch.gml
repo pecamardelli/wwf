@@ -1,9 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function hit_mid_punch(){
-	var angle = arccos(-facing)*180/pi;
-	apply_force(angle, other.attack.force);
-	
 	moveScript = undefined;
 	
 	switch (position) {
@@ -11,9 +8,7 @@ function hit_mid_punch(){
 		case POSITION_FRONT: sprite_index = data.character.sprites.front.facePunched; break;
 	}
 	
-	animationEndScript = function () {
-		moveScript = basic_movement;
-	};
+	animationEndScript = function () { moveScript = basic_movement };
 	
 	// Play a sound defined in attack definition of the character.
 	var hitSounds = variable_struct_get(other.attack.sounds, "hit");
@@ -24,5 +19,15 @@ function hit_mid_punch(){
 	play_random_sound(painSounds);
 	
 	currentHealth -= other.attack.damage;
+	
+	if (currentHealth > 0) {
+		var angle = arccos(-facing)*180/pi;
+		apply_force(angle, other.attack.force);
+	}
+	else {
+		var angle = 90 + 30 * facing;
+		apply_force(angle,600);
+	}
+	
 	other.attack = undefined;
 }

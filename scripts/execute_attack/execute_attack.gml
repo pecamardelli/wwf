@@ -8,37 +8,7 @@ function execute_attack() {
 	moveScript = undefined;
 	speed = 0;
 	canAttack = false;
-	
-	//var collisionMaskWidth = attack.collisionMask.width * GAME_SCALE;
-	//var collisionMaskHeight = attack.collisionMask.height * GAME_SCALE;
-	//var collisionMaskX = x + attack.collisionMask.x * facing * GAME_SCALE;
-	//var collisionMaskY = y - attack.collisionMask.y * GAME_SCALE;
-	
-	//attackCollisionMaskId = instance_create_depth(
-	//	collisionMaskX,
-	//	collisionMaskY,
-	//	depth,
-	//	ObjectAttackCollisionMask
-	//);
-
-	//attackCollisionMaskId.creatorId = id;
-	
-	//with (attackCollisionMaskId) {
-	//	var newSprite = sprite_duplicate(spriteTransparent);
-	//	sprite_collision_mask(
-	//		newSprite,
-	//		false,
-	//		bboxkind_rectangular,
-	//		sprite_get_width(spriteTransparent)/2 - collisionMaskWidth/2,
-	//		sprite_get_height(spriteTransparent)/2 - collisionMaskHeight/2,
-	//		sprite_get_width(spriteTransparent)/2 + collisionMaskWidth/2,
-	//		sprite_get_height(spriteTransparent)/2 + collisionMaskHeight/2,
-	//		1,
-	//		0
-	//	);
-	//	sprite_index = newSprite;
-	//	image_xscale = creatorId.facing;
-	//}
+	status = ATTACKING;
 	
 	switch (position) {
 		case POSITION_BACK: sprite_index = attack.sprites.back; break;

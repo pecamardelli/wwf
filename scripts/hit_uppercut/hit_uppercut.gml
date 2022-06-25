@@ -5,6 +5,7 @@ function hit_uppercut(){
 	apply_force(angle,other.attack.force);
 	moveScript = undefined;
 	spriteScript = dropped_sprites;
+	status = DROPPED;
 	
 	// Play a sound defined in attack definition of character.
 	var hitSounds = variable_struct_get(other.attack.sounds, "hit");

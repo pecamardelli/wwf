@@ -21,6 +21,7 @@
 #macro ATTACKING				0x03
 #macro BLOCKING					0x04
 #macro DROPPED					0x05
+#macro GETTING_UP				0x06
 #macro READY_FOR_TERMINATION	0xFE
 #macro ABOUT_TO_TERMINATE		0xFF
 

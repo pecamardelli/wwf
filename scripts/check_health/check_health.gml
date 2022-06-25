@@ -9,8 +9,6 @@ function check_health(){
 		
 		if (spriteScript != dropped_sprites && spriteScript != hit_floor_script) {
 			spriteScript = dropped_sprites;
-			var angle = 90 + 30 * facing;
-			apply_force(angle,600);
 			onFloor = false;
 		}
 		

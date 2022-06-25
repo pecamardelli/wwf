@@ -6,11 +6,18 @@ function check_position(){
 			y = floorY;
 			if (rebound) {
 				play_random_sound(global.sounds.ringImpact.hard, undefined, 0.5);
-				apply_force(90 + 5*sign(-hspeed), 300);
+				vspeed = 0;
+				apply_force(90, 300);
 				rebound = false;
 			}
 			else {
-				play_random_sound(global.sounds.bodyDrop, undefined, 0.5);
+				if (spriteScript == dropped_sprites) {
+					play_random_sound(global.sounds.bodyDrop, undefined, 0.5);
+					canBeHit = false;
+				}
+				else {
+					play_random_sound(global.sounds.steps.run, undefined, 0.5);
+				}
 				vspeed = 0;
 				onFloor = true;
 				rebound = true;

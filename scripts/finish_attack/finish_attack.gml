@@ -4,6 +4,5 @@ function finish_attack(){
 	canAttack = true;
 	moveScript = basic_movement;
 	attack = undefined;
-	if (!is_undefined(attackCollisionMaskId)) instance_destroy(attackCollisionMaskId);
-	attackCollisionMaskId = undefined;
+	status = IDLE;
 }

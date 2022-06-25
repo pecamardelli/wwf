@@ -45,5 +45,9 @@ global.sounds = {
 			sndRingImpactHard06
 		]
 	},
+	steps: {
+		walk: [ sndStepWalk01, sndStepWalk02 ],
+		run: [ sndStepRun01, sndStepRun02, sndStepRun03 ]
+	},
 	bodyDrop: [ sndBodyDrop01, sndBodyDrop02 ]
 };

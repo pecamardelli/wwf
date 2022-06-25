@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndsteprun03.wav",
-  "duration": 0.35746,
+  "duration": 0.671429,
   "parent": {
     "name": "General",
     "path": "folders/Sounds/General.yy",

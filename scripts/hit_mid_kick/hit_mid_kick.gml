@@ -4,12 +4,13 @@ function hit_mid_kick(){
 	var angle = 90 + 30 * facing;
 	apply_force(angle,other.attack.force);
 	
-	rebound = false;
 	moveScript = undefined;
 	spriteScript = function () {
-		if (!onFloor && image_index >= 5) image_speed = 0;
+		if (!onFloor && image_index >= 3) image_speed = 0;
 		else image_speed = 1;
 	}
+	
+	rebound = false;
 	
 	switch (position) {
 		case POSITION_BACK: sprite_index = data.character.sprites.back.ballsKicked; break;	

@@ -11,7 +11,7 @@ function play_random_sound(soundArray, customAudioEmitter, gain){
 	
 	var previousGain = audio_emitter_get_gain(_audioEmitter);
 	
-	if (audio_is_playing(currentAudio)) audio_stop_sound(currentAudio);
+	//if (audio_is_playing(currentAudio)) audio_stop_sound(currentAudio);
 	
 	if(!is_undefined(gain)) audio_emitter_gain(_audioEmitter, gain);
 	else audio_emitter_gain(_audioEmitter, previousGain);

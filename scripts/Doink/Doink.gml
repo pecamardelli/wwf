@@ -36,5 +36,13 @@ function Doink() constructor {
 	
 	var painSounds = {};
 	variable_struct_set(painSounds, ATTACK_MID_PUNCH, [ sndDoinkPain08, sndDoinkPain11 ]);
+	variable_struct_set(painSounds, ATTACK_MID_KICK, [
+		sndDoinkPain01,
+		sndDoinkPain03,
+		sndDoinkPain06,
+		sndDoinkPain09,
+		sndDoinkPain10
+	]);
+	variable_struct_set(painSounds, ATTACK_POWER_KICK, [ sndDoinkPain08, sndDoinkPain11 ]);
 	variable_struct_set(sounds, "painSounds", painSounds);
 }

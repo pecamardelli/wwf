@@ -5,7 +5,7 @@ function get_target(targetObject){
 	//if (nearestTarget == noone) return undefined;
 	//return nearestTarget;
 
-	var c_obj = noone;  //Clear initial closest object
+	var c_obj = undefined;  //Clear initial closest object
 	var c_dis = 999999; //Maximum distance to check
 
 	with (targetObject) {
@@ -17,5 +17,6 @@ function get_target(targetObject){
 	        }
 	    }
 	}
+	
 	return c_obj;
 }

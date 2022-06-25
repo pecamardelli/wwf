@@ -3,13 +3,14 @@
 function get_doink_attacks(){
 	var attacks = {};
 	
-	var mid_punch = new Attack(
+	#region MID PUNCH
+	
+	var midPunch = new Attack(
 		ATTACK_MID_PUNCH,
 		{ front: spriteDoinkMidPunchFront, back: spriteDoinkMidPunchBack },
 		80,
 		50,
 		[4],
-		{ x: 47, y: 92, width: 30, height: 10 },
 		undefined,
 		undefined,
 		hit_mid_punch,
@@ -20,7 +21,11 @@ function get_doink_attacks(){
 		}
 	);
 	
-	variable_struct_set(attacks, ATTACK_MID_PUNCH, mid_punch);
+	variable_struct_set(attacks, ATTACK_MID_PUNCH, midPunch);
+	
+	#endregion
+	
+	#region	UPPERCUT
 	
 	var uppercut = new Attack(
 		ATTACK_UPPERCUT,
@@ -31,7 +36,6 @@ function get_doink_attacks(){
 		1200,
 		180,
 		[4],
-		{ x: 41, y: 82, width: 24, height: 21 },
 		undefined,
 		undefined,
 		hit_uppercut,
@@ -43,6 +47,58 @@ function get_doink_attacks(){
 	);
 	
 	variable_struct_set(attacks, ATTACK_UPPERCUT, uppercut);
+	
+	#endregion
+	
+	#region MID KICK
+	
+	var midKick = new Attack(
+		ATTACK_MID_KICK,
+		{
+			front: spriteDoinkMidKickFront,
+			back: spriteDoinkMidKickBack
+		},
+		400,
+		85,
+		[3],
+		undefined,
+		undefined,
+		hit_mid_kick,
+		{
+			swing: global.sounds.swing,
+			hit: [ sndPunch08 ],
+			attack: [ sndDoinkAttack10 ]
+		}
+	);
+	
+	variable_struct_set(attacks, ATTACK_MID_KICK, midKick);
+	
+	#endregion
+	
+	#region POWER KICK
+	
+	var powerKick = new Attack(
+		ATTACK_POWER_KICK,
+		{
+			front: spriteDoinkPowerKickFront,
+			back: spriteDoinkPowerKickBack
+		},
+		450,
+		100,
+		[4],
+		method(ObjectCharacter, function() { apply_force(45,200) }),
+		undefined,
+		hit_mid_kick,
+		{
+			swing: global.sounds.swing,
+			hit: [ sndPunch03 ],
+			attack: [ sndDoinkAttack10 ]
+		}
+	);
+	
+	variable_struct_set(attacks, ATTACK_POWER_KICK, powerKick);
+	
+	#endregion
 	
 	return attacks;
 }

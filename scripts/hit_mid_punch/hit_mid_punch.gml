@@ -19,7 +19,7 @@ function hit_mid_punch(){
 	var hitSounds = variable_struct_get(other.attack.sounds, "hit");
 	play_random_sound(hitSounds, other.audioEmitter);
 	
-	// Play a sound defined in attack definition of the character.
+	// Play a sound of the given type stored in attack definition of the character.
 	var painSounds = variable_struct_get(data.character.sounds.painSounds, ATTACK_MID_PUNCH);
 	play_random_sound(painSounds);
 	

@@ -1,10 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function hit_power_kick(){
-	var angle = 10 + random_range(3,12) * facing;
+	var angle = 90 + random_range(70,80) * facing;
 	apply_force(angle,other.attack.force);
 	
 	moveScript = undefined;
+	spriteScript = function () {
+		if (!onFloor && image_index >= 2) image_speed = 0;
+		else image_speed = 1;
+	}
 	
 	switch (position) {
 		case POSITION_BACK: sprite_index = data.character.sprites.back.facePunched; break;	
@@ -13,6 +17,7 @@ function hit_power_kick(){
 	
 	animationEndScript = function () {
 		moveScript = basic_movement;
+		spriteScript = update_sprites;
 	};
 	
 	// Play a sound defined in attack definition of the character.

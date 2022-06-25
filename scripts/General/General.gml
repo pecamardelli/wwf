@@ -20,8 +20,9 @@
 #macro RUNNING					0x02
 #macro ATTACKING				0x03
 #macro BLOCKING					0x04
-#macro READY_FOR_TERMINATION	0x05
-#macro ABOUT_TO_TERMINATE		0x06
+#macro DROPPED					0x05
+#macro READY_FOR_TERMINATION	0xFE
+#macro ABOUT_TO_TERMINATE		0xFF
 
 #macro ROTATE_X		0x00
 #macro ROTATE_Y		0x01

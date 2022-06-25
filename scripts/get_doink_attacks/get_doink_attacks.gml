@@ -58,7 +58,7 @@ function get_doink_attacks(){
 			front: spriteDoinkMidKickFront,
 			back: spriteDoinkMidKickBack
 		},
-		400,
+		600,
 		85,
 		[3],
 		undefined,
@@ -83,12 +83,12 @@ function get_doink_attacks(){
 			front: spriteDoinkPowerKickFront,
 			back: spriteDoinkPowerKickBack
 		},
-		450,
+		200,
 		100,
 		[4],
 		method(ObjectCharacter, function() { apply_force(45,200) }),
 		undefined,
-		hit_mid_kick,
+		hit_power_kick,
 		{
 			swing: global.sounds.swing,
 			hit: [ sndPunch03 ],

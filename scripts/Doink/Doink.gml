@@ -13,6 +13,7 @@ function Doink() constructor {
 			rotateX: spriteDoinkRotateXFront,
 			rotateY: spriteDoinkRotateYFront,
 			facePunched: spriteDoinkFacePunchedFront,
+			ballsKicked: spriteDoinkBallsKicked,
 			getUp: spriteDoinkGetUpFront
 		},
 		back: {
@@ -23,6 +24,7 @@ function Doink() constructor {
 			rotateX: spriteDoinkRotateXBack,
 			rotateY: spriteDoinkRotateYBack,
 			facePunched: spriteDoinkFacePunchedBack,
+			ballsKicked: spriteDoinkBallsKicked,
 			getUp: spriteDoinkGetUpFront
 		},
 		run: spriteDoinkRun,

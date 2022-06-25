@@ -1,18 +1,24 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function hit_mid_kick(){
-	var angle = 10 + random_range(3,12) * facing;
+	var angle = 90 + 30 * facing;
 	apply_force(angle,other.attack.force);
 	
+	rebound = false;
 	moveScript = undefined;
+	spriteScript = function () {
+		if (!onFloor && image_index >= 5) image_speed = 0;
+		else image_speed = 1;
+	}
 	
 	switch (position) {
-		case POSITION_BACK: sprite_index = data.character.sprites.back.facePunched; break;	
-		case POSITION_FRONT: sprite_index = data.character.sprites.front.facePunched; break;
+		case POSITION_BACK: sprite_index = data.character.sprites.back.ballsKicked; break;	
+		case POSITION_FRONT: sprite_index = data.character.sprites.front.ballsKicked; break;
 	}
 	
 	animationEndScript = function () {
 		moveScript = basic_movement;
+		spriteScript = update_sprites;
 	};
 	
 	// Play a sound defined in attack definition of the character.
@@ -20,7 +26,7 @@ function hit_mid_kick(){
 	play_random_sound(hitSounds, other.audioEmitter);
 	
 	// Play a sound defined in attack definition of the character.
-	var painSounds = variable_struct_get(data.character.sounds.painSounds, ATTACK_MID_PUNCH);
+	var painSounds = variable_struct_get(data.character.sounds.painSounds, ATTACK_MID_KICK);
 	play_random_sound(painSounds);
 	
 	currentHealth -= other.attack.damage;

@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Gameplay/Movement/Attacks/Hits.yy",
   },
   "resourceVersion": "1.0",
-  "name": "hit_mid_punch",
+  "name": "attack_hit",
   "tags": [],
   "resourceType": "GMScript",
 }

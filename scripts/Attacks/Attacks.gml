@@ -1,6 +1,6 @@
 // ATTACKS
-#macro ATTACK_MID_PUNCH		0x00
-#macro ATTACK_MID_KICK		0x01
-#macro ATTACK_POWER_PUNCH	0x02
-#macro ATTACK_POWER_KICK	0x03
-#macro ATTACK_UPPERCUT		0x04
+#macro ATTACK_MID_PUNCH		"midPunch"
+#macro ATTACK_MID_KICK		"midKick"
+#macro ATTACK_POWER_PUNCH	"powerPunch"
+#macro ATTACK_POWER_KICK	"powerKick"
+#macro ATTACK_UPPERCUT		"uppercut"

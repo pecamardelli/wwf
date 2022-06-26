@@ -16,7 +16,7 @@ function update_sprites(){
 				lastFacing = facing;
 			}
 		
-			position = floorY > target.y ? POSITION_BACK : POSITION_FRONT;
+			position = floorY > target.floorY ? POSITION_BACK : POSITION_FRONT;
 			if (lastPosition != position) {
 				rotate = ROTATE_Y;
 				lastPosition = position;

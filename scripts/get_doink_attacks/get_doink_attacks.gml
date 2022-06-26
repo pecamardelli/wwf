@@ -13,7 +13,7 @@ function get_doink_attacks(){
 		[4],
 		undefined,
 		undefined,
-		hit_mid_punch,
+		method(ObjectCharacter, function() { return arccos(-facing)*180/pi }),
 		{
 			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
 			hit: [ sndPunch09, sndPunch11 ],

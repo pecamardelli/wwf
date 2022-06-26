@@ -1,16 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function hit_mid_kick(){
-	var angle = 90 + 30 * facing;
-	apply_force(angle,other.attack.force);
-	
-	moveScript = undefined;
 	spriteScript = function () {
 		if (!onFloor && image_index >= 3) image_speed = 0;
 		else image_speed = 1;
 	}
-	
 	rebound = false;
+	
+	moveScript = undefined;
 	
 	switch (position) {
 		case POSITION_BACK: sprite_index = data.character.sprites.back.ballsKicked; break;	
@@ -31,5 +28,15 @@ function hit_mid_kick(){
 	play_random_sound(painSounds);
 	
 	currentHealth -= other.attack.damage;
+	
+	if (currentHealth > 0) {
+		var angle = 90 + 30 * facing;
+		apply_force(angle,other.attack.force);
+	}
+	else {
+		var angle = 90 + 30 * facing;
+		apply_force(angle,600);
+	}
+	
 	other.attack = undefined;
 }

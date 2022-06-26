@@ -20,10 +20,7 @@ if (yRange && other.canBeHit && target == other.id) {
 		if (array_includes(attack.hitFrames, image_index)) {
 			switch (status) {
 				case BLOCKING: with (other) block_script(); break;
-				default:
-					var hitScript = attack.hitScript;
-					if (!is_undefined(hitScript)) with (other) hitScript();
-					break;
+				default: with (other) attack_hit(other.attack); break;
 			}
 		}
 	}

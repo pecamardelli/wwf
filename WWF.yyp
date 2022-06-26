@@ -88,7 +88,7 @@
     {"id":{"name":"sndDoinkAttack08","path":"sounds/sndDoinkAttack08/sndDoinkAttack08.yy",},"order":7,},
     {"id":{"name":"sndDoinkAttack09","path":"sounds/sndDoinkAttack09/sndDoinkAttack09.yy",},"order":8,},
     {"id":{"name":"sndPunch03","path":"sounds/sndPunch03/sndPunch03.yy",},"order":2,},
-    {"id":{"name":"hit_mid_punch","path":"scripts/hit_mid_punch/hit_mid_punch.yy",},"order":1,},
+    {"id":{"name":"attack_hit","path":"scripts/attack_hit/attack_hit.yy",},"order":1,},
     {"id":{"name":"sndPunch04","path":"sounds/sndPunch04/sndPunch04.yy",},"order":3,},
     {"id":{"name":"sndStepRun03","path":"sounds/sndStepRun03/sndStepRun03.yy",},"order":22,},
     {"id":{"name":"Doink","path":"scripts/Doink/Doink.yy",},"order":1,},

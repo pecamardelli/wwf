@@ -13,7 +13,7 @@ function get_doink_attacks(){
 		[4],
 		undefined,
 		undefined,
-		method(ObjectCharacter, function() { return arccos(-facing)*180/pi }),
+		method(ObjectCharacter, function() { return arccos(-facing)*180/pi; }),
 		{
 			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
 			hit: [ sndPunch09, sndPunch11 ],
@@ -36,9 +36,17 @@ function get_doink_attacks(){
 		1200,
 		180,
 		[4],
+		method(ObjectCharacter, function() {
+			with (other) {
+				alarmScript = function () { image_speed = 1; }
+				image_speed = 0;
+				image_index = attack.hitFrames[0];
+				apply_force(arccos(-facing)*180/pi, random_range(8,15));
+				alarm_set(0, 0.2 * room_speed);
+			}
+		}),
 		undefined,
-		undefined,
-		hit_uppercut,
+		method(ObjectCharacter, function() { return 90 + random_range(3,12) * -facing; }),
 		{
 			swing: global.sounds.swing,
 			hit: [ sndPunch04 ],
@@ -61,9 +69,15 @@ function get_doink_attacks(){
 		600,
 		85,
 		[3],
+		method(ObjectCharacter, function() {
+			spriteScript = function () {
+				if (!onFloor && image_index >= 3) image_speed = 0;
+				else image_speed = 1;
+			}
+			rebound = false;
+		}),
 		undefined,
-		undefined,
-		hit_mid_kick,
+		method(ObjectCharacter, function() { return 45; }),
 		{
 			swing: global.sounds.swing,
 			hit: [ sndPunch08 ],
@@ -86,9 +100,9 @@ function get_doink_attacks(){
 		200,
 		100,
 		[4,5],
-		method(ObjectCharacter, function() { apply_force(45,200) }),
+		method(ObjectCharacter, function() { apply_force(45,200); }),
 		undefined,
-		hit_power_kick,
+		method(ObjectCharacter, function() { return 90 + random_range(70,80) * -facing; }),
 		{
 			swing: global.sounds.swing,
 			hit: [ sndPunch03 ],

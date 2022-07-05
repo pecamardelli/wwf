@@ -11,11 +11,13 @@ function hit_power_kick(){
 	}
 	
 	if (status != DROPPED) {
-		switch (position) {
-			case POSITION_BACK: sprite_index = data.character.sprites.back.facePunched; break;	
-			case POSITION_FRONT: sprite_index = data.character.sprites.front.facePunched; break;
-		}
+		sprite_index = data.character.sprites[position].hits[other.attack.type];
 	}
+	//	switch (position) {
+	//		case POSITION_BACK: sprite_index = data.character.sprites.back.facePunched; break;	
+	//		case POSITION_FRONT: sprite_index = data.character.sprites.front.facePunched; break;
+	//	}
+	//}
 	else {
 		image_index = 1;
 		apply_force(90,other.attack.force*2);

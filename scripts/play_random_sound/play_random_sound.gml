@@ -11,11 +11,11 @@ function play_random_sound(soundArray, customAudioEmitter, gain){
 	
 	var previousGain = audio_emitter_get_gain(_audioEmitter);
 	
-	//if (audio_is_playing(currentAudio)) audio_stop_sound(currentAudio);
+	//if (audio_is_playing(audioEmitterSoundId)) audio_stop_sound(audioEmitterSoundId);
 	
 	if(!is_undefined(gain)) audio_emitter_gain(_audioEmitter, gain);
 	else audio_emitter_gain(_audioEmitter, previousGain);
 	
-	currentAudio = audio_play_sound_on(_audioEmitter,randomSound,false,1);
-	return currentAudio;
+	audioEmitterSoundId = audio_play_sound_on(_audioEmitter,randomSound,false,1);
+	return audioEmitterSoundId;
 }

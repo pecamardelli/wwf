@@ -37,12 +37,17 @@ function get_doink_attacks(){
 		180,
 		[4],
 		method(ObjectCharacter, function() {
-			with (other) {
-				alarmScript = function () { image_speed = 1; }
-				image_speed = 0;
-				image_index = attack.hitFrames[0];
-				apply_force(arccos(-facing)*180/pi, random_range(8,15));
-				alarm_set(0, 0.2 * room_speed);
+			alarmScript = function () { image_speed = 1; }
+			image_speed = 0;
+			image_index = attack.hitFrames[0];
+			apply_force(arccos(-facing)*180/pi, random_range(8,15));
+			alarm_set(0, 0.2 * room_speed);
+			apply_force(90+90*facing,irandom_range(150,250));
+			
+			with (target) {
+				moveScript = undefined;
+				spriteScript = dropped_sprites;
+				status = DROPPED;
 			}
 		}),
 		undefined,
@@ -66,18 +71,20 @@ function get_doink_attacks(){
 			front: spriteDoinkMidKickFront,
 			back: spriteDoinkMidKickBack
 		},
-		600,
+		400,
 		85,
 		[3],
 		method(ObjectCharacter, function() {
-			spriteScript = function () {
-				if (!onFloor && image_index >= 3) image_speed = 0;
-				else image_speed = 1;
+			with (target) {
+				spriteScript = function () {
+					if (!onFloor && image_index >= 3) image_speed = 0;
+					else image_speed = 1;
+				}
+				rebound = false;
 			}
-			rebound = false;
 		}),
 		undefined,
-		method(ObjectCharacter, function() { return 45; }),
+		method(ObjectCharacter, function() { return 90 + 30 * -facing; }),
 		{
 			swing: global.sounds.swing,
 			hit: [ sndPunch08 ],
@@ -97,10 +104,10 @@ function get_doink_attacks(){
 			front: spriteDoinkPowerKickFront,
 			back: spriteDoinkPowerKickBack
 		},
-		200,
+		100,
 		100,
 		[4,5],
-		method(ObjectCharacter, function() { apply_force(45,200); }),
+		method(ObjectCharacter, function() { apply_force(90+70*facing,irandom_range(100,200)); }),
 		undefined,
 		method(ObjectCharacter, function() { return 90 + random_range(70,80) * -facing; }),
 		{

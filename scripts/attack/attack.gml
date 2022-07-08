@@ -6,8 +6,8 @@ function Attack(
 	_force,
 	_damage,
 	_hitFrames,
-	_preScript,
-	_postScript,
+	_attackScript,
+	_hitScript,
 	_forceAngleScript,
 	_sounds
 ) constructor {
@@ -16,8 +16,8 @@ function Attack(
 	force = _force;
 	damage = _damage;
 	hitFrames = _hitFrames;
-	preScript = _preScript;
-	postScript = _postScript;
+	attackScript = _attackScript;
+	hitScript = _hitScript;
 	forceAngleScript = _forceAngleScript;
 	sounds = _sounds;
 }

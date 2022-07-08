@@ -6,8 +6,8 @@ function attack_hit(_attack){
 	
 	moveScript = undefined;
 	
-	var preScript = variable_struct_get(_attack, "preScript");
-	if (!is_undefined(preScript)) preScript();
+	var hitScript = variable_struct_get(_attack, "hitScript");
+	if (!is_undefined(hitScript)) hitScript();
 	
 	// Hit sprites
 	sprite_index = data.character.sprites[$position].hits[$other.attack.type];
@@ -39,9 +39,6 @@ function attack_hit(_attack){
 		var force = 600;
 	}
 	apply_force(angle,force);
-	
-	var postScript = variable_struct_get(_attack, "postScript");
-	if (!is_undefined(postScript)) postScript();
 	
 	other.attack = undefined;
 }

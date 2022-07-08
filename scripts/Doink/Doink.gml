@@ -2,6 +2,7 @@
 // https =//help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Doink() constructor {
 	name = "Doink The Clown";
+	weight = 243;
 	walkSpeed = 5;
 	runSpeed = 10;
 	

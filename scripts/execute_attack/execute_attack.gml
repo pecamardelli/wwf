@@ -4,7 +4,7 @@ function execute_attack() {
 	if(!is_struct(attack)) return;
 	
 	moveScript = undefined;
-	speed = 0;
+	vspeed = 0;
 	canAttack = false;
 	status = ATTACKING;
 	
@@ -14,6 +14,8 @@ function execute_attack() {
 	
 	attackScript = undefined;
 	animationEndScript = finish_attack;
+	
+	if(!is_undefined(attack.attackScript)) attack.attackScript();
 	
 	var swingSounds = variable_struct_get(attack.sounds, "swing");
 	play_random_sound(swingSounds);

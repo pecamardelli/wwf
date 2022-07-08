@@ -36,6 +36,7 @@ function get_doink_attacks(){
 		1200,
 		180,
 		[4],
+		undefined,
 		method(ObjectCharacter, function() {
 			alarmScript = function () { image_speed = 1; }
 			image_speed = 0;
@@ -50,7 +51,6 @@ function get_doink_attacks(){
 				status = DROPPED;
 			}
 		}),
-		undefined,
 		method(ObjectCharacter, function() { return 90 + random_range(3,12) * -facing; }),
 		{
 			swing: global.sounds.swing,
@@ -74,6 +74,7 @@ function get_doink_attacks(){
 		400,
 		85,
 		[3],
+		undefined,
 		method(ObjectCharacter, function() {
 			with (target) {
 				spriteScript = function () {
@@ -83,7 +84,6 @@ function get_doink_attacks(){
 				rebound = false;
 			}
 		}),
-		undefined,
 		method(ObjectCharacter, function() { return 90 + 30 * -facing; }),
 		{
 			swing: global.sounds.swing,
@@ -107,8 +107,14 @@ function get_doink_attacks(){
 		100,
 		100,
 		[4,5],
-		method(ObjectCharacter, function() { apply_force(90+70*facing,irandom_range(100,200)); }),
-		undefined,
+		method(ObjectCharacter, function() { apply_force(90+70*-facing,irandom_range(50,100)); }),
+		method(ObjectCharacter, function() {
+			var otherForce = other.data.character.weight * (1+abs(other.hspeed));
+			var myForce = data.character.weight * (1+abs(hspeed));
+			var resultantForce = abs(myForce - otherForce);
+			var forceDirection = sign(myForce - otherForce);
+			apply_force(90+80*forceDirection,resultantForce);
+		}),
 		method(ObjectCharacter, function() { return 90 + random_range(70,80) * -facing; }),
 		{
 			swing: global.sounds.swing,

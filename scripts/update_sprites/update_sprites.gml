@@ -30,6 +30,7 @@ function update_sprites(){
 				switch (rotate) {
 					case ROTATE_X:
 						sprite_index = sprites.rotateX;
+						image_index = 0;
 						image_xscale = GAME_SCALE * -facing;
 						break;
 					case ROTATE_Y:

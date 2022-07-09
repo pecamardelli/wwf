@@ -25,6 +25,43 @@ function get_doink_attacks(){
 	
 	#endregion
 	
+	#region POWER PUNCH
+	
+	var powerPunch = new Attack(
+		ATTACK_POWER_PUNCH,
+		{ POSITION_FRONT: spriteDoinkSlapFront, POSITION_BACK: spriteDoinkSlapBack },
+		80,
+		50,
+		[4],
+		method(ObjectCharacter, function() {
+			var baseDistance = 200;
+			var targetDistance = point_distance(x,y,target.x,target.y);
+			if (targetDistance > baseDistance) targetDistance = baseDistance;
+			if (targetDistance < 100) var multiplier = facing*1.3;
+			else var multiplier = -facing;
+			var angle = 90 + 45 * targetDistance/baseDistance * multiplier;
+			rebound = false;
+			apply_force(angle,irandom_range(200,400));
+		}),
+		undefined,
+		method(ObjectCharacter, function() { return arccos(-facing)*180/pi; }),
+		{
+			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
+			hit: [ sndPunch04, sndPunch08, sndPunch12 ],
+			attack: [
+				sndDoinkAttack05,
+				sndDoinkAttack08,
+				sndDoinkAttack09,
+				sndDoinkAttack10,
+				sndDoinkAttack12
+			]
+		}
+	);
+	
+	variable_struct_set(attacks, ATTACK_POWER_PUNCH, powerPunch);
+	
+	#endregion
+	
 	#region	UPPERCUT
 	
 	var uppercut = new Attack(
@@ -101,8 +138,8 @@ function get_doink_attacks(){
 	var powerKick = new Attack(
 		ATTACK_POWER_KICK,
 		{
-			front: spriteDoinkPowerKickFront,
-			back: spriteDoinkPowerKickBack
+			POSITION_FRONT: spriteDoinkPowerKickFront,
+			POSITION_BACK: spriteDoinkPowerKickBack
 		},
 		100,
 		100,

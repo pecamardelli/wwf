@@ -7,7 +7,7 @@ function check_attack() {
 	
 	if (buttonA) attack = variable_struct_get(attacks, ATTACK_MID_PUNCH);
 	if (buttonC) attack = variable_struct_get(attacks, ATTACK_MID_KICK);
-	if (buttonX) attack = variable_struct_get(attacks, ATTACK_UPPERCUT);
+	if (buttonX) attack = variable_struct_get(attacks, ATTACK_POWER_PUNCH);
 	if (buttonZ) attack = variable_struct_get(attacks, ATTACK_POWER_KICK);
 	
 	if (!is_undefined(attack)) execute_attack();

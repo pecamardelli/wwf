@@ -17,6 +17,7 @@ function Doink() constructor {
 			getUp: spriteDoinkGetUpFront,
 			hits: {
 				ATTACK_MID_PUNCH: spriteDoinkFacePunchedFront,
+				ATTACK_POWER_PUNCH: spriteDoinkFacePunchedFront,
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedFront,
 				ATTACK_UPPERCUT: spriteDoinkDropped
@@ -32,6 +33,7 @@ function Doink() constructor {
 			getUp: spriteDoinkGetUpFront,
 			hits: {
 				ATTACK_MID_PUNCH: spriteDoinkFacePunchedBack,
+				ATTACK_POWER_PUNCH: spriteDoinkFacePunchedBack,
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedBack,
 				ATTACK_UPPERCUT: spriteDoinkDropped

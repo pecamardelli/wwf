@@ -69,6 +69,7 @@
     {"id":{"name":"spriteDoinkFacePunchedFront","path":"sprites/spriteDoinkFacePunchedFront/spriteDoinkFacePunchedFront.yy",},"order":22,},
     {"id":{"name":"Taker","path":"scripts/Taker/Taker.yy",},"order":6,},
     {"id":{"name":"hit_floor_script","path":"scripts/hit_floor_script/hit_floor_script.yy",},"order":3,},
+    {"id":{"name":"spriteDoinkSlapFront","path":"sprites/spriteDoinkSlapFront/spriteDoinkSlapFront.yy",},"order":28,},
     {"id":{"name":"fontFranklinGothicDemi","path":"fonts/fontFranklinGothicDemi/fontFranklinGothicDemi.yy",},"order":0,},
     {"id":{"name":"dropped_sprites","path":"scripts/dropped_sprites/dropped_sprites.yy",},"order":4,},
     {"id":{"name":"sndDoinkPain09","path":"sounds/sndDoinkPain09/sndDoinkPain09.yy",},"order":8,},

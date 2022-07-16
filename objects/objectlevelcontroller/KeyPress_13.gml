@@ -1,4 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-instance_create_depth(room_width * random(1), room_height * 0.66,1,ObjectEnemy);
+instance_create_depth(
+	room_width * random_range(0.3,0.6),
+	room_height * random_range(0.3,0.9),
+	1,
+	ObjectEnemy
+);

@@ -6,8 +6,8 @@ function get_target(targetObject){
 	var distance = 999999; //Maximum distance to check
 
 	with (targetObject) {
-	    if (health > 0) {
-	        var dis = point_distance(x, y, other.x, other.y);
+	    if (health > 0 && canBeHit) {
+	        var dis = point_distance(x, floorY, other.x, other.floorY);
 	        if (dis < distance) {
 	            closestObject = id;
 	            distance = dis;

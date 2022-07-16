@@ -23,35 +23,7 @@ function update_sprites(){
 			}
 		}
 		
-		switch (position) {
-			case POSITION_BACK:
-				var imageSpeedSign = -1;
-				var sprites = data.character.sprites.back;
-				switch (rotate) {
-					case ROTATE_X:
-						sprite_index = sprites.rotateX;
-						image_index = 0;
-						image_xscale = GAME_SCALE * -facing;
-						break;
-					case ROTATE_Y:
-						sprite_index = sprites.rotateY;
-						break;
-				}
-				break;
-			case POSITION_FRONT:
-				var imageSpeedSign = 1;
-				var sprites = data.character.sprites.front;
-				switch (rotate) {
-					case ROTATE_X:
-						sprite_index = sprites.rotateX;
-						image_xscale = GAME_SCALE * -facing;
-						break;
-					case ROTATE_Y:
-						sprite_index = sprites.rotateY;
-						break;
-				}
-				break;
-		}
+		var sprites = data.character.sprites[$position];
 
 		if (is_undefined(rotate)) {
 			image_xscale = GAME_SCALE * facing;
@@ -62,6 +34,9 @@ function update_sprites(){
 			}
 
 			if (moveY) {
+				if (position == POSITION_BACK) var imageSpeedSign = -1;
+				else var imageSpeedSign = 1;
+				
 				sprite_index = sprites.walkVertical;
 				image_speed = vspeed/maxVSpeed*imageSpeedSign;
 			}
@@ -79,5 +54,6 @@ function update_sprites(){
 				image_speed = 1;
 			}
 		}
+		else sprite_index = sprites[$rotate];
 	}
 }

@@ -10,6 +10,7 @@ check_health();
 check_status();
 check_dropped();
 check_position();
+check_target();
 check_attack();
 if (!is_undefined(moveScript)) moveScript();
 if (!is_undefined(spriteScript)) spriteScript();

@@ -12,15 +12,16 @@ function Doink() constructor {
 			walkHorizontal: spriteDoinkWalkHorizontalFront,
 			walkVertical: spriteDoinkWalkVerticalFront,
 			walkDiagonal: spriteDoinkWalkDiagonalFront,
-			rotateX: spriteDoinkRotateXFront,
-			rotateY: spriteDoinkRotateYFront,
+			ROTATE_X: spriteDoinkRotateXFront,
+			ROTATE_Y: spriteDoinkRotateYFront,
 			getUp: spriteDoinkGetUpFront,
 			hits: {
 				ATTACK_MID_PUNCH: spriteDoinkFacePunchedFront,
 				ATTACK_POWER_PUNCH: spriteDoinkFacePunchedFront,
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedFront,
-				ATTACK_UPPERCUT: spriteDoinkDropped
+				ATTACK_UPPERCUT: spriteDoinkDropped,
+				ATTACK_DOWN_FWD: spriteDoinkFacePunchedFront
 			}
 		},
 		POSITION_BACK: {
@@ -28,15 +29,16 @@ function Doink() constructor {
 			walkHorizontal: spriteDoinkWalkHorizontalBack,
 			walkVertical: spriteDoinkWalkVerticalBack,
 			walkDiagonal: spriteDoinkWalkDiagonalBack,
-			rotateX: spriteDoinkRotateXBack,
-			rotateY: spriteDoinkRotateYBack,
+			ROTATE_X: spriteDoinkRotateXBack,
+			ROTATE_Y: spriteDoinkRotateYBack,
 			getUp: spriteDoinkGetUpFront,
 			hits: {
 				ATTACK_MID_PUNCH: spriteDoinkFacePunchedBack,
 				ATTACK_POWER_PUNCH: spriteDoinkFacePunchedBack,
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedBack,
-				ATTACK_UPPERCUT: spriteDoinkDropped
+				ATTACK_UPPERCUT: spriteDoinkDropped,
+				ATTACK_DOWN_FWD: spriteDoinkFacePunchedBack
 			}
 		},
 		run: spriteDoinkRun,

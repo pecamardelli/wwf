@@ -13,6 +13,8 @@
 #macro POSITION_BACK	"back"
 #macro FACING_LEFT		-1
 #macro FACING_RIGHT		1
+#macro ROTATE_X			"rotx"
+#macro ROTATE_Y			"roty"
 
 // Entity statuses
 #macro IDLE						0x00
@@ -25,9 +27,6 @@
 #macro READY_FOR_TERMINATION	0xFE
 #macro ABOUT_TO_TERMINATE		0xFF
 
-#macro ROTATE_X		0x00
-#macro ROTATE_Y		0x01
-
 #macro DOINK	"doink"
 #macro RAZOR	"razor"
 #macro TAKER	"taker"
@@ -37,5 +36,5 @@
 #macro HITMAN	"hitman"
 #macro LEX		"lex"
 
-#macro CHARACTER_X_DISTANCE 30
-#macro CHARACTER_Y_DISTANCE	30
+#macro CHARACTER_X_DISTANCE 35
+#macro CHARACTER_Y_DISTANCE	40

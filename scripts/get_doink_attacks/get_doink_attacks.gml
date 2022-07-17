@@ -62,6 +62,32 @@ function get_doink_attacks(){
 	
 	#endregion
 	
+	#region HEADBUTT
+	
+	var headbutt = new Attack(
+		ATTACK_HEADBUTT,
+		{ POSITION_FRONT: spriteDoinkHeadbuttFront, POSITION_BACK: spriteDoinkHeadbuttBack },
+		80,
+		50,
+		[4],
+		undefined,
+		method(ObjectCharacter, function() {
+			if (random(1) < 0.5) {
+				audioEmitterSoundId = audio_play_sound_on(audioEmitter,sndDoinkHooter,false,1);
+			}
+		}),
+		method(ObjectCharacter, function() { return arccos(-facing)*180/pi; }),
+		{
+			swing: [ sndSwing04, sndSwing05, sndSwing06 ,sndSwing07 ],
+			hit: [ sndPunch02, sndPunch05, sndPunch07, sndPunch11 ],
+			attack: []
+		}
+	);
+	
+	variable_struct_set(attacks, ATTACK_HEADBUTT, headbutt);
+	
+	#endregion
+	
 	#region	UPPERCUT
 	
 	var uppercut = new Attack(

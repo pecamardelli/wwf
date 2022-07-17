@@ -11,6 +11,7 @@ function attack_hit(_attack){
 	
 	// Hit sprites
 	sprite_index = data.character.sprites[$position].hits[$other.attack.type];
+	image_index = 0;
 	
 	animationEndScript = function () {
 		moveScript = basic_movement;

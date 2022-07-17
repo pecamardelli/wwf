@@ -18,6 +18,7 @@ function Doink() constructor {
 			hits: {
 				ATTACK_MID_PUNCH: spriteDoinkFacePunchedFront,
 				ATTACK_POWER_PUNCH: spriteDoinkFacePunchedFront,
+				ATTACK_HEADBUTT: spriteDoinkHeadbutted,
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedFront,
 				ATTACK_UPPERCUT: spriteDoinkDropped,
@@ -35,6 +36,7 @@ function Doink() constructor {
 			hits: {
 				ATTACK_MID_PUNCH: spriteDoinkFacePunchedBack,
 				ATTACK_POWER_PUNCH: spriteDoinkFacePunchedBack,
+				ATTACK_HEADBUTT: spriteDoinkHeadbutted,
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedBack,
 				ATTACK_UPPERCUT: spriteDoinkDropped,
@@ -58,7 +60,8 @@ function Doink() constructor {
 				sndDoinkPain09,
 				sndDoinkPain10
 			],
-			ATTACK_POWER_KICK: [ sndDoinkPain08, sndDoinkPain11 ]
+			ATTACK_POWER_KICK: [ sndDoinkPain08, sndDoinkPain11 ],
+			ATTACK_HEADBUTT: [ sndYokoPain02, sndShawnPain01, sndShawnPain05 ]
 		}
 	};
 }

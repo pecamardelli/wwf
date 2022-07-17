@@ -13,6 +13,7 @@ function check_attack() {
 			if (!is_undefined(attack)) attack = variable_struct_get(attacks, ATTACK_POWER_PUNCH);
 		}
 		else if (right) attack = variable_struct_get(attacks, ATTACK_DOWN_FWD);
+		else if (left) attack = variable_struct_get(attacks, ATTACK_HEADBUTT);
 		else attack = variable_struct_get(attacks, ATTACK_POWER_PUNCH);
 	}
 	if (buttonZ) attack = variable_struct_get(attacks, ATTACK_POWER_KICK);

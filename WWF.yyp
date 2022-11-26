@@ -56,6 +56,7 @@
     {"id":{"name":"block_attack","path":"scripts/block_attack/block_attack.yy",},"order":5,},
     {"id":{"name":"block_sprites","path":"scripts/block_sprites/block_sprites.yy",},"order":10,},
     {"id":{"name":"sndDoinkAttack04","path":"sounds/sndDoinkAttack04/sndDoinkAttack04.yy",},"order":3,},
+    {"id":{"name":"get_key_timestamps","path":"scripts/get_key_timestamps/get_key_timestamps.yy",},"order":2,},
     {"id":{"name":"sndDoinkPain10","path":"sounds/sndDoinkPain10/sndDoinkPain10.yy",},"order":9,},
     {"id":{"name":"ObjectEnemy","path":"objects/ObjectEnemy/ObjectEnemy.yy",},"order":2,},
     {"id":{"name":"sndSwing02","path":"sounds/sndSwing02/sndSwing02.yy",},"order":1,},

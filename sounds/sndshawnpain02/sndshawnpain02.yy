@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndshawnpain02.wav",
-  "duration": 0.385941,
+  "duration": 0.341497,
   "parent": {
     "name": "Pain",
     "path": "folders/Sounds/Characters/Shawn Michaels/Pain.yy",

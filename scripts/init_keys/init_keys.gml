@@ -13,6 +13,13 @@ function init_keys(){
 	buttonY	= false;
 	buttonZ	= false;
 	
+	downRight = false;
+	downLeft = false;
+	doubleRight = false;
+	doubleLeft = false;
+	doubleDown = false;
+	doubleUp = false;
+	
 	start	= false;
 	select	= false;
 }

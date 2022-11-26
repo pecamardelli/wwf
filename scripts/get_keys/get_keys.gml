@@ -21,4 +21,33 @@ function get_keys() {
 	
 	if(!is_undefined(keys.keyboard.start))  start	= keyboard_check_pressed(keys.keyboard.start);
 	if(!is_undefined(keys.keyboard.select)) select	= keyboard_check_pressed(keys.keyboard.select);
+	
+	if (left) {
+		if (current_time - keyLastPressedTime.left < MULTIKEY_TIME) doubleLeft = true;
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downLeft = true;
+		keyLastPressedTime.left = current_time;
+	}
+	
+	if (right) {
+		if (current_time - keyLastPressedTime.right < MULTIKEY_TIME) doubleRight = true;
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downRight = true;
+		keyLastPressedTime.right = current_time;
+	}
+	
+	if (down) {
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) doubleDown = true;
+		keyLastPressedTime.down = current_time;
+	}
+	
+	if (up) {
+		if (current_time - keyLastPressedTime.up < MULTIKEY_TIME) doubleUp = true;
+		keyLastPressedTime.up = current_time;
+	}
+	
+	if (downRight) show_debug_message("downRight");
+	if (downLeft) show_debug_message("downLeft");
+	if (doubleLeft) show_debug_message("doubleLeft");
+	if (doubleRight) show_debug_message("doubleRight");
+	if (doubleDown) show_debug_message("doubleDown");
+	if (doubleUp) show_debug_message("doubleUp");
 }

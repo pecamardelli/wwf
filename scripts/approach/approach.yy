@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "approach",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Utilities",
     "path": "folders/Scripts/Utilities.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "approach",
-  "tags": [],
-  "resourceType": "GMScript",
 }

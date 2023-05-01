@@ -48,7 +48,7 @@ function Doink() constructor {
 		defence: spriteDoinkDefence
 	};
 	
-	attacks = get_doink_attacks();
+	attacks = doink_get_attacks();
 	
 	sounds = {
 		painSounds: {

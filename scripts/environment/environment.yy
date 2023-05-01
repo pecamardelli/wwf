@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "environment",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "External",
     "path": "folders/Scripts/Gameplay/Movement/External.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "environment",
-  "tags": [],
-  "resourceType": "GMScript",
 }

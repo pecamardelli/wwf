@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Yoko",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Characters",
     "path": "folders/Scripts/Data/Constructors/Characters.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "Yoko",
-  "tags": [],
-  "resourceType": "GMScript",
 }

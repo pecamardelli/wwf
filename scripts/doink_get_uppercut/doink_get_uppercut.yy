@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "doink_get_uppercut",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Doink",
     "path": "folders/Scripts/Data/Attack Scripts/Doink.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "get_doink_attacks",
-  "tags": [],
-  "resourceType": "GMScript",
 }

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function doink_get_head_butt(){
 	return new Attack(
-		ATTACK_HEADBUTT,
+		ATTACK_FORWARD,
 		{ POSITION_FRONT: spriteDoinkHeadbuttFront, POSITION_BACK: spriteDoinkHeadbuttBack },
 		80,
 		50,

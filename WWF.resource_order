@@ -44,6 +44,7 @@
     {"name":"sndRingImpactHard05","order":16,"path":"sounds/sndRingImpactHard05/sndRingImpactHard05.yy",},
     {"name":"RoomScenery","order":1,"path":"rooms/RoomScenery/RoomScenery.yy",},
     {"name":"sndDoinkPain05","order":4,"path":"sounds/sndDoinkPain05/sndDoinkPain05.yy",},
+    {"name":"getAttackDefinitions","order":1,"path":"scripts/getAttackDefinitions/getAttackDefinitions.yy",},
     {"name":"sndPunch11","order":10,"path":"sounds/sndPunch11/sndPunch11.yy",},
     {"name":"spriteDoinkMidKickFront","order":25,"path":"sprites/spriteDoinkMidKickFront/spriteDoinkMidKickFront.yy",},
     {"name":"spriteDoinkHeadbuttBack","order":30,"path":"sprites/spriteDoinkHeadbuttBack/spriteDoinkHeadbuttBack.yy",},

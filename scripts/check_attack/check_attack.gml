@@ -5,18 +5,28 @@ function check_attack() {
 	
 	if (!canAttack || !is_undefined(attackScript) || is_undefined(attacks)) return;
 	
-	if (buttonA) attack = variable_struct_get(attacks, ATTACK_MID_PUNCH);
-	if (buttonC) attack = variable_struct_get(attacks, ATTACK_MID_KICK);
-	if (buttonX) {
-		if (down) {
-			attack = variable_struct_get(attacks, ATTACK_UPPERCUT);
-			if (!is_undefined(attack)) attack = variable_struct_get(attacks, ATTACK_POWER_PUNCH);
-		}
-		else if (right) attack = variable_struct_get(attacks, ATTACK_DOWN_FWD);
-		else if (left) attack = variable_struct_get(attacks, ATTACK_HEADBUTT);
-		else attack = variable_struct_get(attacks, ATTACK_POWER_PUNCH);
-	}
-	if (buttonZ) attack = variable_struct_get(attacks, ATTACK_POWER_KICK);
+	var movementCombination = undefined;
 	
-	if (!is_undefined(attack)) execute_attack();
+	if(forward) movementCombination = ATTACK_FORWARD;
+	else if(doubleForward) movementCombination = ATTACK_DOUBLE_FORWARD;
+	else if(backward) movementCombination = ATTACK_BACKWARD;
+	else if(doubleBackward) movementCombination = ATTACK_DOUBLE_BACKWARD;
+	else if(down) movementCombination = ATTACK_DOWN;
+	else if(downForward) movementCombination = ATTACK_DOWN_FORWARD;
+	else if(downBackward) movementCombination = ATTACK_DOWN_BACKWARD;
+	else if(doubleDown) movementCombination = ATTACK_DOUBLE_DOWN;
+	
+	if (!is_undefined(movementCombination)) attacks = variable_struct_get(attacks, movementCombination);
+	
+	var attackType = undefined;
+	
+	if(buttonA) attackType = ATTACK_MID_PUNCH;
+	else if(buttonC) attackType = ATTACK_MID_KICK;
+	else if(buttonX) attackType = ATTACK_POWER_PUNCH;
+	else if(buttonZ) attackType = ATTACK_POWER_KICK;
+	
+	if(!is_undefined(attackType)) {
+		var attack = variable_struct_get(attacks, attackType);
+		if (!is_undefined(attack)) execute_attack();
+	}
 }

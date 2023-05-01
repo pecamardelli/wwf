@@ -5,6 +5,9 @@ function init_keys(){
 	right	= false;
 	up		= false;
 	down	= false;
+	
+	forward	= false;
+	backward = false;
 
 	buttonA	= false;
 	buttonB	= false;
@@ -13,10 +16,10 @@ function init_keys(){
 	buttonY	= false;
 	buttonZ	= false;
 	
-	downRight = false;
-	downLeft = false;
-	doubleRight = false;
-	doubleLeft = false;
+	downForward = false;
+	downBackward = false;
+	doubleForward = false;
+	doubleBackward = false;
 	doubleDown = false;
 	doubleUp = false;
 	

@@ -10,6 +10,8 @@ function get_key_timestamps(){
 		buttonZ: 0,
 		left: 0,
 		right: 0,
+		forward: 0,
+		backward: 0,
 		up: 0,
 		down: 0
 	};

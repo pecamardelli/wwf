@@ -115,6 +115,7 @@
     {"id":{"name":"sndRingImpactHard05","path":"sounds/sndRingImpactHard05/sndRingImpactHard05.yy",},},
     {"id":{"name":"RoomScenery","path":"rooms/RoomScenery/RoomScenery.yy",},},
     {"id":{"name":"sndDoinkPain05","path":"sounds/sndDoinkPain05/sndDoinkPain05.yy",},},
+    {"id":{"name":"getAttackDefinitions","path":"scripts/getAttackDefinitions/getAttackDefinitions.yy",},},
     {"id":{"name":"sndPunch11","path":"sounds/sndPunch11/sndPunch11.yy",},},
     {"id":{"name":"sndDoinkAttack01","path":"sounds/sndDoinkAttack01/sndDoinkAttack01.yy",},},
     {"id":{"name":"spriteDoinkMidKickFront","path":"sprites/spriteDoinkMidKickFront/spriteDoinkMidKickFront.yy",},},

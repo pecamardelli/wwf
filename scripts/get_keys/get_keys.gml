@@ -7,8 +7,28 @@ function get_keys() {
 	
 	if(is_undefined(keys)) return;
 	
-	if(!is_undefined(keys.keyboard.left))  left		= keyboard_check(keys.keyboard.left);
-	if(!is_undefined(keys.keyboard.right)) right	= keyboard_check(keys.keyboard.right);
+	if(!is_undefined(keys.keyboard.left)){
+		left = keyboard_check_pressed(keys.keyboard.left);
+		if(left) {
+			switch(facing) {
+				case FACING_LEFT: forward = true; break;
+				case FACING_RIGHT: backward = true; break;
+				default: break;
+			}
+		}
+	}
+	
+	if(!is_undefined(keys.keyboard.right)) {
+		right = keyboard_check_pressed(keys.keyboard.right);
+		if(right) {
+			switch(facing) {
+				case FACING_LEFT: backward = true; break;
+				case FACING_RIGHT: forward = true; break;
+				default: break;
+			}
+		}
+	}
+	
 	if(!is_undefined(keys.keyboard.up))	   up		= keyboard_check(keys.keyboard.up);
 	if(!is_undefined(keys.keyboard.down))  down		= keyboard_check(keys.keyboard.down);
 
@@ -22,16 +42,16 @@ function get_keys() {
 	if(!is_undefined(keys.keyboard.start))  start	= keyboard_check_pressed(keys.keyboard.start);
 	if(!is_undefined(keys.keyboard.select)) select	= keyboard_check_pressed(keys.keyboard.select);
 	
-	if (left) {
-		if (current_time - keyLastPressedTime.left < MULTIKEY_TIME) doubleLeft = true;
-		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downLeft = true;
-		keyLastPressedTime.left = current_time;
+	if (forward) {
+		if (current_time - keyLastPressedTime.forward < MULTIKEY_TIME) doubleForward = true;
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downForward = true;
+		keyLastPressedTime.forward = current_time;
 	}
 	
-	if (right) {
-		if (current_time - keyLastPressedTime.right < MULTIKEY_TIME) doubleRight = true;
-		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downRight = true;
-		keyLastPressedTime.right = current_time;
+	if (backward) {
+		if (current_time - keyLastPressedTime.backward < MULTIKEY_TIME) doubleBackward = true;
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downBackward = true;
+		keyLastPressedTime.backward = current_time;
 	}
 	
 	if (down) {
@@ -44,10 +64,10 @@ function get_keys() {
 		keyLastPressedTime.up = current_time;
 	}
 	
-	if (downRight) show_debug_message("downRight");
-	if (downLeft) show_debug_message("downLeft");
-	if (doubleLeft) show_debug_message("doubleLeft");
-	if (doubleRight) show_debug_message("doubleRight");
+	if (downForward) show_debug_message("downForward");
+	if (downBackward) show_debug_message("downBackward");
+	if (doubleForward) show_debug_message("doubleForward");
+	if (doubleBackward) show_debug_message("doubleBackward");
 	if (doubleDown) show_debug_message("doubleDown");
 	if (doubleUp) show_debug_message("doubleUp");
 }

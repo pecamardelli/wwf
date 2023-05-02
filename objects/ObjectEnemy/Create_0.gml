@@ -11,12 +11,12 @@ data = {
 			down: ord("S"),
 			left: ord("A"),
 			right: ord("D"),
-			buttonA: ord("J"),
-			buttonB: ord("K"),
-			buttonC: ord("L"),
-			buttonX: ord("U"),
-			buttonY: ord("I"),
-			buttonZ: ord("O"),
+			midPunch: ord("J"),
+			block: ord("K"),
+			midKick: ord("L"),
+			powerPunch: ord("U"),
+			trot: ord("I"),
+			powerKick: ord("O"),
 			start: ord("Enter"),
 			select: ord("Space")
 		}

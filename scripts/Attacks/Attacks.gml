@@ -14,3 +14,6 @@
 #macro ATTACK_DOWN_FORWARD		"downForward"
 #macro ATTACK_DOWN_BACKWARD		"downBackward"
 #macro ATTACK_DOUBLE_DOWN		"doubleDown"
+
+#macro ATTACK_CLAPPER		"clapper"
+#macro ATTACK_UPPERCUT		"uppercut"

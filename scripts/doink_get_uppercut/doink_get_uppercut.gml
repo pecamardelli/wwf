@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function doink_get_uppercut(){
 	return new Attack(
-		ATTACK_DOWN,
+		ATTACK_UPPERCUT,
 		{ POSITION_FRONT: spriteDoinkUppercut, POSITION_BACK: spriteDoinkUppercut},
 		1200,
 		180,

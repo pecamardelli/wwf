@@ -8,7 +8,7 @@ function block_sprites(){
 		sprite_index = defenceSprite;
 		moveScript = undefined;
 	}
-	else if (!buttonB) {
+	else if (!block) {
 		if (image_index == freezeFrame) {
 			image_speed = -1;
 			animationEndScript = function () {

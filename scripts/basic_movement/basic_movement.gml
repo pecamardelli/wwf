@@ -13,7 +13,7 @@ function basic_movement(){
 	else if (down) vspeed = maxVSpeed;
 	else vspeed = 0;
 	
-	if (buttonB) {
+	if (block) {
 		if (status != BLOCKING) {
 			audio_play_sound(sndSwing03,1,false);
 			speed = 0;
@@ -23,7 +23,7 @@ function basic_movement(){
 		}
 		return;
 	}
-	else if (buttonY) {
+	else if (trot) {
 		moveScript = run;
 		status = RUNNING;
 	}

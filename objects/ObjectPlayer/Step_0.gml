@@ -5,7 +5,6 @@ get_depth();
 init_keys();
 get_keys();
 
-
 check_health();
 check_status();
 check_dropped();

@@ -6,15 +6,23 @@ function init_keys(){
 	up		= false;
 	down	= false;
 	
+	leftPressed		= false;
+	rightPressed	= false;
+	upPressed		= false;
+	downPressed		= false;
+	
 	forward	= false;
 	backward = false;
+	
+	forwardPressed	= false;
+	backwardPressed = false;
 
-	buttonA	= false;
-	buttonB	= false;
-	buttonC	= false;
-	buttonX	= false;
-	buttonY	= false;
-	buttonZ	= false;
+	midPunch	= false;
+	block		= false;
+	midKick		= false;
+	powerPunch	= false;
+	trot		= false;
+	powerKick	= false;
 	
 	downForward = false;
 	downBackward = false;

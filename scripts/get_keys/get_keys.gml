@@ -8,7 +8,9 @@ function get_keys() {
 	if(is_undefined(keys)) return;
 	
 	if(!is_undefined(keys.keyboard.left)){
-		left = keyboard_check_pressed(keys.keyboard.left);
+		left = keyboard_check(keys.keyboard.left);
+		leftPressed = keyboard_check_pressed(keys.keyboard.left);
+		
 		if(left) {
 			switch(facing) {
 				case FACING_LEFT: forward = true; break;
@@ -16,10 +18,20 @@ function get_keys() {
 				default: break;
 			}
 		}
+		
+		if(leftPressed) {
+			switch(facing) {
+				case FACING_LEFT: forwardPressed = true; break;
+				case FACING_RIGHT: backwardPressed = true; break;
+				default: break;
+			}
+		}
 	}
 	
 	if(!is_undefined(keys.keyboard.right)) {
-		right = keyboard_check_pressed(keys.keyboard.right);
+		right = keyboard_check(keys.keyboard.right);
+		rightPressed = keyboard_check_pressed(keys.keyboard.right);
+		
 		if(right) {
 			switch(facing) {
 				case FACING_LEFT: backward = true; break;
@@ -27,41 +39,56 @@ function get_keys() {
 				default: break;
 			}
 		}
+		
+		if(rightPressed) {
+			switch(facing) {
+				case FACING_LEFT: backwardPressed = true; break;
+				case FACING_RIGHT: forwardPressed = true; break;
+				default: break;
+			}
+		}
 	}
 	
-	if(!is_undefined(keys.keyboard.up))	   up		= keyboard_check(keys.keyboard.up);
-	if(!is_undefined(keys.keyboard.down))  down		= keyboard_check(keys.keyboard.down);
+	if(!is_undefined(keys.keyboard.up)) {
+		up = keyboard_check(keys.keyboard.up);
+		upPressed = keyboard_check_pressed(keys.keyboard.up);
+	}
+	
+	if(!is_undefined(keys.keyboard.down)) {
+		down = keyboard_check(keys.keyboard.down);
+		downPressed = keyboard_check_pressed(keys.keyboard.down);
+	}
 
-	if(!is_undefined(keys.keyboard.buttonA)) buttonA	= keyboard_check_pressed(keys.keyboard.buttonA);
-	if(!is_undefined(keys.keyboard.buttonB)) buttonB	= keyboard_check(keys.keyboard.buttonB);
-	if(!is_undefined(keys.keyboard.buttonC)) buttonC	= keyboard_check_pressed(keys.keyboard.buttonC);
-	if(!is_undefined(keys.keyboard.buttonX)) buttonX	= keyboard_check_pressed(keys.keyboard.buttonX);
-	if(!is_undefined(keys.keyboard.buttonY)) buttonY	= keyboard_check_pressed(keys.keyboard.buttonY);
-	if(!is_undefined(keys.keyboard.buttonZ)) buttonZ	= keyboard_check_pressed(keys.keyboard.buttonZ);
+	if(!is_undefined(keys.keyboard.midPunch))	midPunch	= keyboard_check_pressed(keys.keyboard.midPunch);
+	if(!is_undefined(keys.keyboard.block))		block		= keyboard_check(keys.keyboard.block);
+	if(!is_undefined(keys.keyboard.midKick))	midKick		= keyboard_check_pressed(keys.keyboard.midKick);
+	if(!is_undefined(keys.keyboard.powerPunch)) powerPunch	= keyboard_check_pressed(keys.keyboard.powerPunch);
+	if(!is_undefined(keys.keyboard.trot))		trot		= keyboard_check_pressed(keys.keyboard.trot);
+	if(!is_undefined(keys.keyboard.powerKick))	powerKick	= keyboard_check_pressed(keys.keyboard.powerKick);
 	
 	if(!is_undefined(keys.keyboard.start))  start	= keyboard_check_pressed(keys.keyboard.start);
 	if(!is_undefined(keys.keyboard.select)) select	= keyboard_check_pressed(keys.keyboard.select);
 	
-	if (forward) {
+	if (forwardPressed) {
 		if (current_time - keyLastPressedTime.forward < MULTIKEY_TIME) doubleForward = true;
 		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downForward = true;
 		keyLastPressedTime.forward = current_time;
 	}
 	
-	if (backward) {
+	if (backwardPressed) {
 		if (current_time - keyLastPressedTime.backward < MULTIKEY_TIME) doubleBackward = true;
 		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downBackward = true;
 		keyLastPressedTime.backward = current_time;
 	}
 	
-	if (down) {
-		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) doubleDown = true;
-		keyLastPressedTime.down = current_time;
-	}
-	
-	if (up) {
+	if (upPressed) {
 		if (current_time - keyLastPressedTime.up < MULTIKEY_TIME) doubleUp = true;
 		keyLastPressedTime.up = current_time;
+	}
+	
+	if (downPressed) {
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) doubleDown = true;
+		keyLastPressedTime.down = current_time;
 	}
 	
 	if (downForward) show_debug_message("downForward");

@@ -15,9 +15,9 @@ function getAttackDefinitions(){
 
 function getAttackHitsDefinition() {
 	return {
-		ATTACK_POWER_PUNCH: {},
-		ATTACK_MID_PUNCH: {},
-		ATTACK_POWER_KICK: {},
-		ATTACK_MID_KICK: {}
+		ATTACK_POWER_PUNCH: undefined,
+		ATTACK_MID_PUNCH: undefined,
+		ATTACK_POWER_KICK: undefined,
+		ATTACK_MID_KICK: undefined
 	};
 }

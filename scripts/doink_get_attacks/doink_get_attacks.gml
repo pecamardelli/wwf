@@ -16,13 +16,13 @@ function doink_get_attacks(){
 	variable_struct_set(attacks, ATTACK_POWER_KICK, doink_get_power_kick());
 	
 	// HEADBUTT
-	//variable_struct_set(attacks, ATTACK_FWD_PWR_PUNCH, doink_get_head_butt());
+	variable_struct_set(attacks[$(ATTACK_FORWARD)], ATTACK_POWER_PUNCH, doink_get_head_butt());
 	
-	//// UPPERCUT
-	//variable_struct_set(attacks, ATTACK_DOWN_PWR_PUNCH, doink_get_uppercut());
+	// UPPERCUT
+	variable_struct_set(attacks[$(ATTACK_DOWN)], ATTACK_POWER_PUNCH, doink_get_uppercut());
 	
-	//// CLAPPER
-	//variable_struct_set(attacks, ATTACK_DOWN_FWD_PWR_PUNCH, doink_get_clapper());
+	// CLAPPER
+	variable_struct_set(attacks[$(ATTACK_DOWN_FORWARD)], ATTACK_POWER_PUNCH, doink_get_clapper());
 	
 	return attacks;
 }

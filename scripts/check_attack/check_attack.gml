@@ -10,18 +10,20 @@ function check_attack() {
 	var attackType = undefined;
 	
 	if(forward) movementCombination = ATTACK_FORWARD;
-	else if(doubleForward) movementCombination = ATTACK_DOUBLE_FORWARD;
-	else if(backward) movementCombination = ATTACK_BACKWARD;
-	else if(doubleBackward) movementCombination = ATTACK_DOUBLE_BACKWARD;
-	else if(down) movementCombination = ATTACK_DOWN;
-	else if(downForward) movementCombination = ATTACK_DOWN_FORWARD;
-	else if(downBackward) movementCombination = ATTACK_DOWN_BACKWARD;
-	else if(doubleDown) movementCombination = ATTACK_DOUBLE_DOWN;
+	if(downPressed) movementCombination = ATTACK_DOWN;
+	if(backward) movementCombination = ATTACK_BACKWARD;
+	
+	if(doubleForward) movementCombination = ATTACK_DOUBLE_FORWARD;
+	if(doubleBackward) movementCombination = ATTACK_DOUBLE_BACKWARD;
+	if(doubleDown) movementCombination = ATTACK_DOUBLE_DOWN;
+	
+	if(downForward) movementCombination = ATTACK_DOWN_FORWARD;
+	if(downBackward) movementCombination = ATTACK_DOWN_BACKWARD;
 	
 	if(midPunch) attackType = ATTACK_MID_PUNCH;
-	else if(midKick) attackType = ATTACK_MID_KICK;
-	else if(powerPunch) attackType = ATTACK_POWER_PUNCH;
-	else if(powerKick) attackType = ATTACK_POWER_KICK;
+	if(midKick) attackType = ATTACK_MID_KICK;
+	if(powerPunch) attackType = ATTACK_POWER_PUNCH;
+	if(powerKick) attackType = ATTACK_POWER_KICK;
 	
 	if(is_undefined(attackType)) return;
 	

@@ -17,3 +17,4 @@
 
 #macro ATTACK_CLAPPER		"clapper"
 #macro ATTACK_UPPERCUT		"uppercut"
+#macro ATTACK_HEADBUTT		"headbutt"

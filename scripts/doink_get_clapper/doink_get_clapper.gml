@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function doink_get_clapper(){
 	return new Attack(
-		DOINK_ATTACK_CLAPPER,
+		ATTACK_CLAPPER,
 		{ POSITION_FRONT: spriteDoinkClapper, POSITION_BACK: spriteDoinkClapper },
 		550,
 		60,

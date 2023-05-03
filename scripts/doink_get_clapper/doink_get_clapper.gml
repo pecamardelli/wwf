@@ -8,6 +8,8 @@ function doink_get_clapper(){
 		60,
 		[5],
 		method(ObjectCharacter, function() {
+			if(is_undefined(target)) return;
+			
 			var baseDistance = 300;
 			var targetDistance = point_distance(x,y,target.x,target.y);
 			if (targetDistance > baseDistance) targetDistance = baseDistance;

@@ -5,13 +5,16 @@ function check_attack() {
 	
 	if (!canAttack || !is_undefined(attackScript) || is_undefined(attacks)) return;
 	
+	var closeRangeAttacks = variable_struct_get(attacks, ATTACK_CLOSE_RANGE);
+	var normalRangeAttacks = variable_struct_get(attacks, ATTACK_NORMAL_RANGE);
+	
 	var movementCombination = undefined;
 	var specialAttacks = undefined;
 	var attackType = undefined;
 	
-	//if(forward) movementCombination = ATTACK_FORWARD;
-	if(downPressed) movementCombination = ATTACK_DOWN;
-	//if(backward) movementCombination = ATTACK_BACKWARD;
+	if(forward) movementCombination = ATTACK_FORWARD;
+	if(down) movementCombination = ATTACK_DOWN;
+	if(backward) movementCombination = ATTACK_BACKWARD;
 	
 	if(doubleForward) movementCombination = ATTACK_DOUBLE_FORWARD;
 	if(doubleBackward) movementCombination = ATTACK_DOUBLE_BACKWARD;
@@ -27,14 +30,30 @@ function check_attack() {
 	
 	if(is_undefined(attackType)) return;
 	
-	if(!is_undefined(movementCombination)) {
-		specialAttacks = variable_struct_get(attacks, movementCombination);
-		attack = variable_struct_get(specialAttacks, attackType);
+	// Trying to get the close range attacks first
+	if(is_target_near()) {
+		if(!is_undefined(movementCombination)) {
+			specialAttacks = variable_struct_get(closeRangeAttacks, movementCombination);
+			attack = variable_struct_get(specialAttacks, attackType);
+		}
+	
+		if(is_undefined(attack)) {
+			attack = variable_struct_get(closeRangeAttacks, attackType);
+		}
 	}
 	
-	if(is_undefined(attack)) {
-		attack = variable_struct_get(attacks, attackType);
-	}
-		
+	// If there aren't any, look for the default normal range attack.
 	if (!is_undefined(attack)) execute_attack();
+	else {
+		if(!is_undefined(movementCombination)) {
+			specialAttacks = variable_struct_get(normalRangeAttacks, movementCombination);
+			attack = variable_struct_get(specialAttacks, attackType);
+		}
+	
+		if(is_undefined(attack)) {
+			attack = variable_struct_get(normalRangeAttacks, attackType);
+		}
+		
+		if (!is_undefined(attack)) execute_attack();
+	}
 }

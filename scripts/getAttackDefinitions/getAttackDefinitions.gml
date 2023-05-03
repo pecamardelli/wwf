@@ -2,6 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function getAttackDefinitions(){
 	return {
+		ATTACK_CLOSE_RANGE: getMovementAttackDefinitions(),
+		ATTACK_NORMAL_RANGE: getMovementAttackDefinitions(),
+	};
+}
+
+function getMovementAttackDefinitions(){
+	return {
 		ATTACK_FORWARD: getAttackHitsDefinition(),
 		ATTACK_DOUBLE_FORWARD: getAttackHitsDefinition(),
 		ATTACK_BACKWARD: getAttackHitsDefinition(),

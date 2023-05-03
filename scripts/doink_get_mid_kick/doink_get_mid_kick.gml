@@ -12,6 +12,8 @@ function doink_get_mid_kick(){
 		[3],
 		undefined,
 		method(ObjectCharacter, function() {
+			if(is_undefined(target)) return;
+			
 			with (target) {
 				spriteScript = function () {
 					if (!onFloor && image_index >= 3) image_speed = 0;

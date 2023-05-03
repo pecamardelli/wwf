@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Getters",
-    "path": "folders/Scripts/Gameplay/Getters.yy",
+    "name": "Utilities",
+    "path": "folders/Scripts/Gameplay/Utilities.yy",
   },
 }

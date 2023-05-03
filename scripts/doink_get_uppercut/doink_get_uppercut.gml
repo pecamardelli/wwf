@@ -9,6 +9,8 @@ function doink_get_uppercut(){
 		[4],
 		undefined,
 		method(ObjectCharacter, function() {
+			if(is_undefined(target)) return;
+			
 			alarmScript = function () { image_speed = 1; }
 			image_speed = 0;
 			image_index = attack.hitFrames[0];

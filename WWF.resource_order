@@ -1,5 +1,7 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Utilities","order":5,"path":"folders/Scripts/Gameplay/Utilities.yy",},
+  ],
   "ResourceOrderSettings": [
     {"name":"run","order":5,"path":"scripts/run/run.yy",},
     {"name":"get_new_character","order":1,"path":"scripts/get_new_character/get_new_character.yy",},
@@ -13,6 +15,7 @@
     {"name":"sndDoinkAttack07","order":6,"path":"sounds/sndDoinkAttack07/sndDoinkAttack07.yy",},
     {"name":"sndDoinkAttack02","order":1,"path":"sounds/sndDoinkAttack02/sndDoinkAttack02.yy",},
     {"name":"sndDoinkPain08","order":7,"path":"sounds/sndDoinkPain08/sndDoinkPain08.yy",},
+    {"name":"is_target_near","order":2,"path":"scripts/is_target_near/is_target_near.yy",},
     {"name":"spriteDoinkWalkHorizontalBack","order":9,"path":"sprites/spriteDoinkWalkHorizontalBack/spriteDoinkWalkHorizontalBack.yy",},
     {"name":"spriteDoinkWalkDiagonalFront","order":4,"path":"sprites/spriteDoinkWalkDiagonalFront/spriteDoinkWalkDiagonalFront.yy",},
     {"name":"check_dropped","order":7,"path":"scripts/check_dropped/check_dropped.yy",},
@@ -25,7 +28,7 @@
     {"name":"sndYokoPain02","order":1,"path":"sounds/sndYokoPain02/sndYokoPain02.yy",},
     {"name":"play_random_sound","order":2,"path":"scripts/play_random_sound/play_random_sound.yy",},
     {"name":"sndRingImpactHard01","order":10,"path":"sounds/sndRingImpactHard01/sndRingImpactHard01.yy",},
-    {"name":"get_target","order":2,"path":"scripts/get_target/get_target.yy",},
+    {"name":"get_target","order":1,"path":"scripts/get_target/get_target.yy",},
     {"name":"sndPunch07","order":6,"path":"sounds/sndPunch07/sndPunch07.yy",},
     {"name":"sndDoinkPain11","order":10,"path":"sounds/sndDoinkPain11/sndDoinkPain11.yy",},
     {"name":"sndStepWalk01","order":18,"path":"sounds/sndStepWalk01/sndStepWalk01.yy",},

@@ -1,4 +1,7 @@
 // ATTACKS
+#macro ATTACK_CLOSE_RANGE	"attackCloseRange"
+#macro ATTACK_NORMAL_RANGE	"attackNormalRange"
+
 #macro ATTACK_MID_PUNCH		"midPunch"
 #macro ATTACK_MID_KICK		"midKick"
 #macro ATTACK_POWER_PUNCH	"powerPunch"

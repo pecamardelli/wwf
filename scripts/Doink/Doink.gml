@@ -22,7 +22,7 @@ function Doink() constructor {
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedFront,
 				ATTACK_UPPERCUT: spriteDoinkDropped,
-				ATTACK_DOWN_FWD: spriteDoinkFacePunchedFront
+				ATTACK_CLAPPER: spriteDoinkFacePunchedFront
 			}
 		},
 		POSITION_BACK: {
@@ -40,7 +40,7 @@ function Doink() constructor {
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedBack,
 				ATTACK_UPPERCUT: spriteDoinkDropped,
-				ATTACK_DOWN_FWD: spriteDoinkFacePunchedBack
+				ATTACK_CLAPPER: spriteDoinkFacePunchedBack
 			}
 		},
 		run: spriteDoinkRun,

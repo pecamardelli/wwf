@@ -24,12 +24,12 @@ function init_keys(){
 	trot		= false;
 	powerKick	= false;
 	
-	downForward = false;
-	downBackward = false;
-	doubleForward = false;
-	doubleBackward = false;
-	doubleDown = false;
-	doubleUp = false;
+	if (current_time - keyLastPressedTime.downForward > MULTIKEY_TIME) downForward = false;
+	if (current_time - keyLastPressedTime.downBackward > MULTIKEY_TIME) downBackward = false;
+	if (current_time - keyLastPressedTime.doubleForward > MULTIKEY_TIME) doubleForward = false;
+	if (current_time - keyLastPressedTime.doubleBackward > MULTIKEY_TIME) doubleBackward = false;
+	if (current_time - keyLastPressedTime.doubleDown > MULTIKEY_TIME) doubleDown = false;
+	if (current_time - keyLastPressedTime.doubleUp > MULTIKEY_TIME) doubleUp = false;
 	
 	start	= false;
 	select	= false;

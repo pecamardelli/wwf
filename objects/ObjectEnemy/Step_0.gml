@@ -11,7 +11,7 @@ check_status();
 check_dropped();
 check_position();
 check_target();
-check_attack();
+//check_attack();
 if (!is_undefined(moveScript)) moveScript();
 if (!is_undefined(spriteScript)) spriteScript();
 if (!is_undefined(endOfLifeScript)) endOfLifeScript();

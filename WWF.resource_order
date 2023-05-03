@@ -30,7 +30,6 @@
     {"name":"sndDoinkPain11","order":10,"path":"sounds/sndDoinkPain11/sndDoinkPain11.yy",},
     {"name":"sndStepWalk01","order":18,"path":"sounds/sndStepWalk01/sndStepWalk01.yy",},
     {"name":"sndBodyDrop02","order":9,"path":"sounds/sndBodyDrop02/sndBodyDrop02.yy",},
-    {"name":"KeyHistory","order":1,"path":"scripts/KeyHistory/KeyHistory.yy",},
     {"name":"spriteDoinkHeadbutted","order":32,"path":"sprites/spriteDoinkHeadbutted/spriteDoinkHeadbutted.yy",},
     {"name":"spriteDoinkSlapBack","order":21,"path":"sprites/spriteDoinkSlapBack/spriteDoinkSlapBack.yy",},
     {"name":"spriteDoinkClapper","order":29,"path":"sprites/spriteDoinkClapper/spriteDoinkClapper.yy",},

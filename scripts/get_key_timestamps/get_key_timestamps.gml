@@ -13,6 +13,12 @@ function get_key_timestamps(){
 		forward: 0,
 		backward: 0,
 		up: 0,
-		down: 0
+		down: 0,
+		downForward: 0,
+		downBackward: 0,
+		doubleForward: 0,
+		doubleBackward: 0,
+		doubleDown: 0,
+		doubleUp: 0
 	};
 }

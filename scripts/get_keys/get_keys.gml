@@ -70,31 +70,55 @@ function get_keys() {
 	if(!is_undefined(keys.keyboard.select)) select	= keyboard_check_pressed(keys.keyboard.select);
 	
 	if (forwardPressed) {
-		if (current_time - keyLastPressedTime.forward < MULTIKEY_TIME) doubleForward = true;
-		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downForward = true;
+		if (current_time - keyLastPressedTime.forward < MULTIKEY_TIME) {
+			doubleForward = true;
+			keyLastPressedTime.doubleForward = current_time;
+		}
+		
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) {
+			downForward = true;
+			keyLastPressedTime.downForward = current_time;
+		}
+		
 		keyLastPressedTime.forward = current_time;
 	}
 	
 	if (backwardPressed) {
-		if (current_time - keyLastPressedTime.backward < MULTIKEY_TIME) doubleBackward = true;
-		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) downBackward = true;
+		if (current_time - keyLastPressedTime.backward < MULTIKEY_TIME) {
+			doubleBackward = true;
+			keyLastPressedTime.doubleBackward = current_time;
+		}
+		
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) {
+			downBackward = true;
+			keyLastPressedTime.downBackward = current_time;
+		}
+		
 		keyLastPressedTime.backward = current_time;
 	}
 	
 	if (upPressed) {
-		if (current_time - keyLastPressedTime.up < MULTIKEY_TIME) doubleUp = true;
+		if (current_time - keyLastPressedTime.up < MULTIKEY_TIME) {
+			doubleUp = true;
+			keyLastPressedTime.doubleUp = current_time;
+		}
+		
 		keyLastPressedTime.up = current_time;
 	}
 	
 	if (downPressed) {
-		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) doubleDown = true;
+		if (current_time - keyLastPressedTime.down < MULTIKEY_TIME) {
+			doubleDown = true;
+			keyLastPressedTime.doubleDown = current_time;
+		}
+		
 		keyLastPressedTime.down = current_time;
 	}
 	
-	if (downForward) show_debug_message("downForward");
-	if (downBackward) show_debug_message("downBackward");
-	if (doubleForward) show_debug_message("doubleForward");
-	if (doubleBackward) show_debug_message("doubleBackward");
-	if (doubleDown) show_debug_message("doubleDown");
-	if (doubleUp) show_debug_message("doubleUp");
+	//if (downForward) msg("downForward");
+	//if (downBackward) msg("downBackward");
+	//if (doubleForward) msg("doubleForward");
+	//if (doubleBackward) msg("doubleBackward");
+	//if (doubleDown) msg("doubleDown");
+	//if (doubleUp) msg("doubleUp");
 }

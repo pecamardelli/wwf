@@ -9,9 +9,9 @@ function check_attack() {
 	var specialAttacks = undefined;
 	var attackType = undefined;
 	
-	if(forward) movementCombination = ATTACK_FORWARD;
+	//if(forward) movementCombination = ATTACK_FORWARD;
 	if(downPressed) movementCombination = ATTACK_DOWN;
-	if(backward) movementCombination = ATTACK_BACKWARD;
+	//if(backward) movementCombination = ATTACK_BACKWARD;
 	
 	if(doubleForward) movementCombination = ATTACK_DOUBLE_FORWARD;
 	if(doubleBackward) movementCombination = ATTACK_DOUBLE_BACKWARD;

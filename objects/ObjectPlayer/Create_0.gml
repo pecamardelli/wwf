@@ -30,4 +30,4 @@ maxVSpeed = data.character.walkSpeed/2.5;
 moveScript = basic_movement;
 spriteScript = update_sprites;
 type = "player";
-show_debug_message(type + " id: " + string(id));
+msg(type + " id: " + string(id));

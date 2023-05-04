@@ -7,6 +7,7 @@ function check_attack() {
 	
 	var closeRangeAttacks = variable_struct_get(attacks, ATTACK_CLOSE_RANGE);
 	var normalRangeAttacks = variable_struct_get(attacks, ATTACK_NORMAL_RANGE);
+	var runningAttacks = variable_struct_get(attacks, ATTACK_RUNNING);
 	
 	var movementCombination = undefined;
 	var specialAttacks = undefined;
@@ -30,8 +31,12 @@ function check_attack() {
 	
 	if(is_undefined(attackType)) return;
 	
-	// Trying to get the close range attacks first
-	if(is_target_near()) {
+		msg(status);
+	// Trying to get running attacks first
+	if(status == RUNNING) {
+		attack = variable_struct_get(runningAttacks, attackType);
+	}
+	else if(is_target_near()) {
 		if(!is_undefined(movementCombination)) {
 			specialAttacks = variable_struct_get(closeRangeAttacks, movementCombination);
 			attack = variable_struct_get(specialAttacks, attackType);

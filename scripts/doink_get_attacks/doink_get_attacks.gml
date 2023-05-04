@@ -4,6 +4,7 @@ function doink_get_attacks(){
 	var attacks = getAttackDefinitions();
 	var closeRangeAttacks = variable_struct_get(attacks, ATTACK_CLOSE_RANGE);
 	var normalRangeAttacks = variable_struct_get(attacks, ATTACK_NORMAL_RANGE);
+	var runningAttacks = variable_struct_get(attacks, ATTACK_RUNNING);
 	
 	// MID PUNCH
 	variable_struct_set(normalRangeAttacks, ATTACK_MID_PUNCH, doink_get_mid_punch());
@@ -22,6 +23,10 @@ function doink_get_attacks(){
 	
 	// UPPERCUT
 	variable_struct_set(closeRangeAttacks[$(ATTACK_DOWN)], ATTACK_POWER_PUNCH, doink_get_uppercut());
+	
+	// DROP KICK
+	variable_struct_set(runningAttacks, ATTACK_MID_KICK, doink_get_drop_kick());
+	variable_struct_set(runningAttacks, ATTACK_MID_PUNCH, doink_get_drop_kick());
 	
 	// CLAPPER
 	variable_struct_set(normalRangeAttacks[$(ATTACK_DOWN_FORWARD)], ATTACK_POWER_PUNCH, doink_get_clapper());

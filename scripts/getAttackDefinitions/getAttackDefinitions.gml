@@ -4,6 +4,7 @@ function getAttackDefinitions(){
 	return {
 		ATTACK_CLOSE_RANGE: getMovementAttackDefinitions(),
 		ATTACK_NORMAL_RANGE: getMovementAttackDefinitions(),
+		ATTACK_RUNNING: getAttackHitsDefinition(),
 	};
 }
 

@@ -31,5 +31,5 @@ function basic_movement(){
 	if (moveY) floorY = y;
 	
 	if (moveX || moveY) status = WALKING;
-	else status = IDLE;
+	else if(!trot) status = IDLE;
 }

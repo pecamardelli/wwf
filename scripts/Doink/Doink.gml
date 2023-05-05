@@ -22,7 +22,8 @@ function Doink() constructor {
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedFront,
 				ATTACK_UPPERCUT: spriteDoinkDropped,
-				ATTACK_CLAPPER: spriteDoinkFacePunchedFront
+				ATTACK_CLAPPER: spriteDoinkFacePunchedFront,
+				ATTACK_DROP_KICK: spriteDoinkDropped
 			}
 		},
 		POSITION_BACK: {
@@ -40,7 +41,8 @@ function Doink() constructor {
 				ATTACK_MID_KICK: spriteDoinkBallsKicked,
 				ATTACK_POWER_KICK: spriteDoinkFacePunchedBack,
 				ATTACK_UPPERCUT: spriteDoinkDropped,
-				ATTACK_CLAPPER: spriteDoinkFacePunchedBack
+				ATTACK_CLAPPER: spriteDoinkFacePunchedBack,
+				ATTACK_DROP_KICK: spriteDoinkDropped
 			}
 		},
 		run: spriteDoinkRun,
@@ -61,7 +63,15 @@ function Doink() constructor {
 				sndDoinkPain10
 			],
 			ATTACK_POWER_KICK: [ sndDoinkPain08, sndDoinkPain11 ],
-			ATTACK_HEADBUTT: [ sndYokoPain02, sndShawnPain01, sndShawnPain05 ]
+			ATTACK_HEADBUTT: [ sndYokoPain02, sndShawnPain01, sndShawnPain05 ],
+			ATTACK_DROP_KICK: [
+				sndShawnPain05,
+				sndDoinkPain03,
+				sndDoinkPain06,
+				sndDoinkPain08,
+				sndDoinkPain09,
+				sndDoinkPain11
+			],
 		}
 	};
 }

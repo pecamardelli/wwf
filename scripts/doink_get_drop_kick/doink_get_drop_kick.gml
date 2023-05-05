@@ -7,23 +7,40 @@ function doink_get_drop_kick(){
 			POSITION_FRONT: spriteDoinkDropKick,
 			POSITION_BACK: spriteDoinkDropKick
 		},
-		200,
+		300,
 		200,
 		[5,6],
-		method(ObjectCharacter, function() { apply_force(90+70*-facing,irandom_range(50,100)); }),
+		method(ObjectCharacter, function() {
+			apply_force(90+25*-facing, 400);
+			moveScript = function() {
+				if (onFloor) hspeed = hspeed/4;
+				else if (image_index == 8) image_speed = 0;
+				
+				if (hspeed == 0) image_speed = 1;
+			};
+		}),
 		method(ObjectCharacter, function() {
 			var otherForce = other.data.character.weight * (1+abs(other.hspeed));
-			var myForce = data.character.weight * (1+abs(hspeed));
+			var myForce = data.character.weight * (1+abs(hspeed/1.4));
 			var resultantForce = abs(myForce - otherForce);
-			var forceDirection = sign(myForce - otherForce);
-			apply_force(90+80*forceDirection,resultantForce);
+			
+			apply_force(90 + 70 * facing, resultantForce);
+			image_speed = 0;
+			image_index = 8;
+			
+			bounce = true;
+			moveScript = function() {
+				if (onFloor) {
+					if (bounce) bounce = false;
+					else image_speed = 1;
+				}
+			};
 		}),
-		method(ObjectCharacter, function() { return 90 + random_range(70,80) * -facing; }),
+		method(ObjectCharacter, function() { return 90 + random_range(30,45) * -facing; }),
 		{
 			swing: global.sounds.swing,
-			hit: [ sndPunch03 ],
+			hit: [ sndPunch02 ],
 			attack: [ sndDoinkAttack10 ]
 		}
 	);
-
 }

@@ -1,3 +1,6 @@
+
+event_inherited();
+
 floorY = y;
 image_xscale = GAME_SCALE;
 image_yscale = GAME_SCALE;

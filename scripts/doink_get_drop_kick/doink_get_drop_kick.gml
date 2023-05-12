@@ -25,11 +25,10 @@ function doink_get_drop_kick(){
 			var resultantForce = abs(myForce - otherForce);
 			
 			apply_force(90 + 70 * facing, resultantForce);
-			image_speed = 0;
-			image_index = 8;
 			
 			bounce = true;
 			moveScript = function() {
+				if (image_index == 8) image_speed = 0;
 				if (onFloor) {
 					if (bounce) bounce = false;
 					else image_speed = 1;

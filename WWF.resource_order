@@ -1,6 +1,7 @@
 {
   "FolderOrderSettings": [
     {"name":"Utilities","order":5,"path":"folders/Scripts/Gameplay/Utilities.yy",},
+    {"name":"General","order":1,"path":"folders/Sprites/General.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"run","order":5,"path":"scripts/run/run.yy",},
@@ -77,6 +78,7 @@
     {"name":"check_health","order":8,"path":"scripts/check_health/check_health.yy",},
     {"name":"spriteDoinkCloseKickBack","order":24,"path":"sprites/spriteDoinkCloseKickBack/spriteDoinkCloseKickBack.yy",},
     {"name":"sndShawnPain03","order":2,"path":"sounds/sndShawnPain03/sndShawnPain03.yy",},
+    {"name":"spriteDoinkGetUpBack","order":46,"path":"sprites/spriteDoinkGetUpBack/spriteDoinkGetUpBack.yy",},
     {"name":"sndPunch13","order":12,"path":"sounds/sndPunch13/sndPunch13.yy",},
     {"name":"spriteDoinkWalkHorizontalFront","order":2,"path":"sprites/spriteDoinkWalkHorizontalFront/spriteDoinkWalkHorizontalFront.yy",},
     {"name":"spriteDoinkFacePunchedFront","order":22,"path":"sprites/spriteDoinkFacePunchedFront/spriteDoinkFacePunchedFront.yy",},
@@ -103,6 +105,7 @@
     {"name":"sndPunch03","order":2,"path":"sounds/sndPunch03/sndPunch03.yy",},
     {"name":"attack_hit","order":4,"path":"scripts/attack_hit/attack_hit.yy",},
     {"name":"sndPunch04","order":3,"path":"sounds/sndPunch04/sndPunch04.yy",},
+    {"name":"ObjectFloor","order":3,"path":"objects/ObjectFloor/ObjectFloor.yy",},
     {"name":"sndStepRun03","order":22,"path":"sounds/sndStepRun03/sndStepRun03.yy",},
     {"name":"Doink","order":1,"path":"scripts/Doink/Doink.yy",},
     {"name":"spriteDoinkWalkVerticalFront","order":3,"path":"sprites/spriteDoinkWalkVerticalFront/spriteDoinkWalkVerticalFront.yy",},

@@ -18,6 +18,12 @@ if (xRange && yRange) {
 if (yRange && other.canBeHit && target == other.id) {
 	if (!is_undefined(attack)) {
 		if (array_includes(attack.hitFrames, image_index)) {
+			// If the character passes away the enemy, do not hit him.
+			if(
+				(facing == FACING_LEFT && x < other.x) ||
+				(facing == FACING_RIGHT && x > other.x)
+			) return;
+			
 			switch (status) {
 				case BLOCKING: with (other) block_attack(); break;
 				default: with (other) attack_hit(other.attack); break;

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function check_position(){
 	if (!onFloor) {
-		if (y >= floorY) {
+		if (place_meeting(x,y,floorId)) {
 			y = floorY;
 			if (rebound) {
 				play_random_sound(global.sounds.ringImpact.hard, undefined, 0.5);
